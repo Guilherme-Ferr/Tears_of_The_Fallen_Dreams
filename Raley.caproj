@@ -10,10 +10,7 @@
     <unique-id>2ktxamtg3fzd4</unique-id>
     <saved-with-version>28000</saved-with-version>
     <used-plugins>
-        <plugin author="Scirra" id="Button" version="1">Button</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
-        <plugin author="Scirra" id="List" version="1">List</plugin>
-        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
@@ -168,25 +165,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Sprite" sid="603812523873876">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="371378674009687" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\FACULDADE DE JOGUINHO\Game Development with Construct 2\Ch02-assets\assets\rock.png">
-                        <collision-poly>
-                            <point x="0.2" y="0.2" />
-                            <point x="0.5" y="0.02" />
-                            <point x="0.82" y="0.18" />
-                            <point x="0.93" y="0.5" />
-                            <point x="0.81" y="0.81" />
-                            <point x="0.5" y="0.91" />
-                            <point x="0.19" y="0.81" />
-                            <point x="0.06" y="0.5" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="vapo" sid="263188568712454">
             <plugin id="TiledBg" />
             <behaviors>
@@ -203,37 +181,6 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\chair.png" />
                 </animation>
             </animation-folder>
-        </object-type>
-        <object-type name="TiledBackground" sid="374122800220612">
-            <plugin id="TiledBg" />
-            <texture original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\ground.jpg" />
-        </object-type>
-        <object-type name="TiledBackground2" sid="125205445852635">
-            <plugin id="TiledBg" />
-            <texture original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\ground.jpg" />
-        </object-type>
-        <object-type name="chao" sid="173204054924944">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="430454327151387" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="-0.740385" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\ground.jpg">
-                        <collision-poly>
-                            <point x="0.00166113" y="0" />
-                            <point x="0.998339" y="0.144233" />
-                            <point x="0.998339" y="0.990385" />
-                            <point x="0.00166113" y="0.990385" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="TiledBackground3" sid="826731296465377">
-            <plugin id="TiledBg" />
-            <texture original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\ground.jpg" />
-        </object-type>
-        <object-type name="TiledBackground4" sid="297980199419678">
-            <plugin id="TiledBg" />
-            <texture original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\ground.jpg" />
         </object-type>
         <object-type name="Sprite2" sid="968517824283371">
             <plugin id="Sprite" />
@@ -280,33 +227,8 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Mouse" sid="811710837952678">
-            <plugin id="Mouse" />
-        </object-type>
-        <object-type name="Button" sid="650440309529050">
-            <plugin id="Button" />
-        </object-type>
         <object-type name="interact" sid="900029674849584">
             <plugin id="Text" />
-        </object-type>
-        <object-type name="interactE" sid="832362457635520">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="531147686511460" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\UI\alphabet.png.opdownload">
-                        <collision-poly>
-                            <point x="0.0125" y="0.0416667" />
-                            <point x="0.5" y="0.0416667" />
-                            <point x="0.975" y="0.0833333" />
-                            <point x="0.9875" y="0.958333" />
-                            <point x="0.0125" y="0.958333" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="list" sid="457619773965533">
-            <plugin id="List" />
         </object-type>
         <object-type name="DialogueBox" sid="862075614027280">
             <plugin id="Sprite" />
@@ -378,7 +300,6 @@
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="4" />
-        <global-instance type="Mouse" uid="8" />
     </global-instances>
     <sounds-folder />
     <music-folder />
