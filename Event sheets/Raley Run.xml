@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <c2eventsheet>
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
-    <name>Raley Movement Event</name>
+    <name>Raley Run</name>
     <events>
-        <event-group description="General moviments of the main character" sid="207230050237022" title="Movement">
+        <event-group description="General moviments of the main character" sid="207230050237022" title="MovementRun">
             <sub-events>
                 <event-block sid="108965421214981">
                     <conditions>
@@ -11,7 +11,7 @@
                     </conditions>
                     <actions>
                         <action behavior="Platform" id="1" name="Set max speed" sid="376936671134790" type="Raley">
-                            <param id="0" name="Max Speed">750</param>
+                            <param id="0" name="Max Speed">800</param>
                         </action>
                     </actions>
                 </event-block>
@@ -77,6 +77,17 @@
                         </action>
                         <action behavior="Platform" id="7" name="Simulate control" sid="204227232040954" type="Raley">
                             <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="993235409781890">
+                    <conditions>
+                        <condition behavior="Platform" id="4" name="Is falling" sid="448141911822692" type="Raley" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="728091858973581" type="Raley">
+                            <param id="0" name="Animation">&quot;fall&quot;</param>
+                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>

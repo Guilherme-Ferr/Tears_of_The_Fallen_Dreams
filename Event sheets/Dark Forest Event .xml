@@ -3,6 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Dark Forest Event </name>
     <events>
-        <include>Raley Movement Event</include>
+        <include>Raley Run</include>
     </events>
 </c2eventsheet>

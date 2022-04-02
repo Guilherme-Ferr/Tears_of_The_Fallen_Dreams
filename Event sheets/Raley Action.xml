@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Raley Action</name>
+    <events>
+        <event-group description="General moviments of the main character" sid="657035325937873" title="MovementAction">
+            <sub-events>
+                <event-block sid="696161987487861">
+                    <conditions>
+                        <condition id="-2" name="On start of layout" sid="436427359906671" type="System" />
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="1" name="Set max speed" sid="243937656118647" type="Raley">
+                            <param id="0" name="Max Speed">800</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="865024452663490">
+                    <conditions>
+                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="512714017059739" type="Raley" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="257187051139149" type="Raley">
+                            <param id="0" name="Animation">&quot;idle&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="343407006521958">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="567181394540324" type="Keyboard">
+                            <param id="0" name="Key">68</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="345301113360195" type="Raley">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="973207810357275" type="Raley">
+                            <param id="0" name="Animation">&quot;run&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="538489306769134" type="Raley">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="698072851389429">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="745145913655642" type="Keyboard">
+                            <param id="0" name="Key">65</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="901199922079561" type="Raley">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="240401522032432" type="Raley">
+                            <param id="0" name="Animation">&quot;run&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="704313572165186" type="Raley">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="899343672886878">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="118719267875779" type="Keyboard">
+                            <param id="0" name="Key">32</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="199276721948753" type="Raley">
+                            <param id="0" name="Animation">&quot;jump&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="973760922206978" type="Raley">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="148658798731986">
+                    <conditions>
+                        <condition behavior="Platform" id="4" name="Is falling" sid="472142023302470" type="Raley" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="966448825409113" type="Raley">
+                            <param id="0" name="Animation">&quot;fall&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>
