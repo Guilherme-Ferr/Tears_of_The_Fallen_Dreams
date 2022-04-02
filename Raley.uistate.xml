@@ -10,8 +10,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">Main</layout>
-        <event-sheet order="1">Event sheet 1</event-sheet>
+        <layout active="1" order="0">Dark Forest</layout>
+        <event-sheet order="1">Dark Forest Event </event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -24,20 +24,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="object-folder/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
-        <folder expanded="1" path="file-folder/" />
+        <folder expanded="0" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
-        <folder expanded="1" path="animation-folder/background/" />
-        <folder expanded="1" path="animation-folder/raley/" />
-        <folder expanded="1" path="animation-folder/chair/" />
-        <folder expanded="1" path="animation-folder/Sprite2/" />
-        <folder expanded="1" path="animation-folder/walls/" />
-        <folder expanded="1" path="animation-folder/Stairs/" />
-        <folder expanded="1" path="animation-folder/stairsFlow/" />
-        <folder expanded="1" path="animation-folder/stairsFlow2/" />
-        <folder expanded="1" path="animation-folder/DialogueBox/" />
-        <folder expanded="1" path="animation-folder/chair2/" />
-        <folder expanded="1" path="animation-folder/DialogueBox2/" />
+        <folder expanded="1" path="animation-folder/Raley/" />
+        <folder expanded="1" path="animation-folder/Grass/" />
     </folders-expanded>
 </c2uistate>

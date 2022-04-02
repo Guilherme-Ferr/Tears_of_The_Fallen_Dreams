@@ -12,17 +12,16 @@
     <used-plugins>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
-        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
+        <plugin author="Scirra" id="shadowlight" version="1">Shadow Light</plugin>
     </used-plugins>
     <used-behaviors>
-        <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="bound" version="1">Bound to layout</behavior>
         <behavior author="Scirra" id="custom" version="1">Custom Movement</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
-        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
+        <behavior author="Scirra" id="shadowcaster" version="1">Shadow Caster</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -51,22 +50,10 @@
         <prop name="Use high-DPI display">Yes</prop>
     </configuration-settings>
     <object-folder>
-        <object-type name="ground" sid="534997705340001">
-            <plugin id="TiledBg" />
-            <texture original-source="E:\FACULDADE DE JOGUINHO\Smaug\assets\ground.jpg" />
-        </object-type>
-        <object-type name="background" sid="211566503544273">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="580121008963163" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\FACULDADE DE JOGUINHO\Smaug\assets\ground.jpg" />
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="Keyboard" sid="830838618791412">
             <plugin id="Keyboard" />
         </object-type>
-        <object-type name="raley" sid="587879599709172">
+        <object-type name="Raley" sid="587879599709172">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Platform" sid="486860699941649">
@@ -81,9 +68,12 @@
                 <behavior-type name="CustomMovement" sid="129919323430698">
                     <behavior id="custom" />
                 </behavior-type>
+                <behavior-type name="ShadowCaster" sid="119452265973153">
+                    <behavior id="shadowcaster" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="207174443734675" speed="5">
+                <animation framecount="1" loop="0" name="idle" pingpong="0" repeatcount="1" repeatto="0" sid="207174443734675" speed="1">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\FACULDADE DE JOGUINHO\Smaug\assets\raleyIdle">
                         <collision-poly>
                             <point x="0.244141" y="0.0292969" />
@@ -163,140 +153,96 @@
                         </collision-poly>
                     </frame>
                 </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="vapo" sid="263188568712454">
-            <plugin id="TiledBg" />
-            <behaviors>
-                <behavior-type name="Solid" sid="203581345185103">
-                    <behavior id="solid" />
-                </behavior-type>
-            </behaviors>
-            <texture original-source="E:\FACULDADE DE JOGUINHO\Game Development with Construct 2\Ch03-assets\assets\space.png" />
-        </object-type>
-        <object-type name="chair" sid="940786663652221">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="590282636859869" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\chair.png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Sprite2" sid="968517824283371">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="816976720639656" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.744" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\ground.jpg" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="walls" sid="949007700496476">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="700594001411184" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.500629" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\room-test.jpg" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Stairs" sid="529356963586278">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Jumpthru" sid="621134380132475">
-                    <behavior id="jumpthru" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="808634248163146" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="stairsFlow" sid="330342110983456">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="681385435775239" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="stairsFlow2" sid="877767317158623">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="469016257579020" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="interact" sid="900029674849584">
-            <plugin id="Text" />
-        </object-type>
-        <object-type name="DialogueBox" sid="862075614027280">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Fade" sid="165055664229668">
-                    <behavior id="Fade" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="301365216516184" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="dialogue" sid="872250728869469">
-            <plugin id="Text" />
-            <behaviors>
-                <behavior-type name="Fade" sid="672858697301697">
-                    <behavior id="Fade" />
-                </behavior-type>
-            </behaviors>
-        </object-type>
-        <object-type name="chair2" sid="212339359985279">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="185327704196251" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\chair.png">
+                <animation framecount="6" loop="0" name="walk" pingpong="0" repeatcount="1" repeatto="0" sid="176596152394430" speed="6">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
-                            <point x="0" y="1" />
-                            <point x="0" y="0" />
-                            <point x="1" y="0" />
-                            <point x="1" y="1" />
+                            <point x="0.244141" y="0.0292969" />
+                            <point x="0.732422" y="0.0292969" />
+                            <point x="0.732422" y="1" />
+                            <point x="0.244141" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.244141" y="0.0292969" />
+                            <point x="0.732422" y="0.0292969" />
+                            <point x="0.732422" y="1" />
+                            <point x="0.244141" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.244141" y="0.0292969" />
+                            <point x="0.732422" y="0.0292969" />
+                            <point x="0.732422" y="1" />
+                            <point x="0.244141" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.244141" y="0.0292969" />
+                            <point x="0.732422" y="0.0292969" />
+                            <point x="0.732422" y="1" />
+                            <point x="0.244141" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.244141" y="0.0292969" />
+                            <point x="0.732422" y="0.0292969" />
+                            <point x="0.732422" y="1" />
+                            <point x="0.244141" y="1" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <collision-poly>
+                            <point x="0.244141" y="0.0292969" />
+                            <point x="0.732422" y="0.0292969" />
+                            <point x="0.732422" y="1" />
+                            <point x="0.244141" y="1" />
                         </collision-poly>
                     </frame>
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="interact2" sid="536879767840487">
-            <plugin id="Text" />
+        <object-type name="BackgroundDarkForest" sid="678695843150308">
+            <plugin id="TiledBg" />
+            <texture original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\backGroundDarkForest" />
         </object-type>
-        <object-type name="DialogueBox2" sid="227247038462454">
+        <object-type name="Grass" sid="920493517715690">
             <plugin id="Sprite" />
             <behaviors>
-                <behavior-type name="Fade" sid="875527435615465">
-                    <behavior id="Fade" />
+                <behavior-type name="Jumpthru" sid="930061818651086">
+                    <behavior id="jumpthru" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="791957366641057" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="433767699611677" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="-3.91818" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\grass">
+                        <collision-poly>
+                            <point x="0" y="0.363636" />
+                            <point x="1" y="0.363636" />
+                            <point x="1" y="1" />
+                            <point x="0" y="1" />
+                        </collision-poly>
+                    </frame>
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="dialogue2" sid="672164509030862">
-            <plugin id="Text" />
-            <behaviors>
-                <behavior-type name="Fade" sid="478042234664029">
-                    <behavior id="Fade" />
-                </behavior-type>
-            </behaviors>
+        <object-type name="Luz" sid="876170710917712">
+            <plugin id="shadowlight" />
         </object-type>
     </object-folder>
     <families />
     <layout-folder>
-        <layout>Main.xml</layout>
+        <layout>Room.xml</layout>
+        <layout>Menu.xml</layout>
+        <layout>Dark Forest.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Room Event.xml</event-sheet>
+        <event-sheet>Menu Event.xml</event-sheet>
+        <event-sheet>Dark Forest Event .xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="4" />
