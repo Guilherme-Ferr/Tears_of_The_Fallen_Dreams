@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Raley Movement Event</name>
+    <events>
+        <event-group description="General moviments of the main character" sid="207230050237022" title="Movement">
+            <sub-events>
+                <event-block sid="518794310830402">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="387998673283068" type="Keyboard">
+                            <param id="0" name="Key">39</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+                <event-block sid="600810552843555">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="566827961576465" type="Keyboard">
+                            <param id="0" name="Key">37</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

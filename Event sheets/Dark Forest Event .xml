@@ -3,63 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Dark Forest Event </name>
     <events>
-        <event-group description="General moviments of the main character" sid="779536529815726" title="Movement2">
-            <sub-events>
-                <event-block sid="895114695635733">
-                    <conditions>
-                        <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="273610996185770" type="Raley" />
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="423154537303145" type="Raley">
-                            <param id="0" name="Animation">&quot;idle&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="640572798968453">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="333746985281419" type="Keyboard">
-                            <param id="0" name="Key">39</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="7" name="Set mirrored" sid="342299744725297" type="Raley">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="634502458105615" type="Raley">
-                            <param id="0" name="Animation">&quot;walk&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="772182814929493">
-                    <conditions>
-                        <condition id="2" name="Key is down" sid="468976090202563" type="Keyboard">
-                            <param id="0" name="Key">37</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="7" name="Set mirrored" sid="499233960880920" type="Raley">
-                            <param id="0" name="State">0</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="462447119356040" type="Raley">
-                            <param id="0" name="Animation">&quot;walk&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="411538201400676">
-                    <conditions>
-                        <condition behavior="Platform" id="3" name="Is jumping" sid="800348664919572" type="Raley" />
-                    </conditions>
-                    <actions>
-                        <action id="4" name="Set animation" sid="847358101567860" type="Raley">
-                            <param id="0" name="Animation">&quot;jump&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                    </actions>
-                </event-block>
-            </sub-events>
-        </event-group>
+        <include>Raley Movement Event</include>
     </events>
 </c2eventsheet>
