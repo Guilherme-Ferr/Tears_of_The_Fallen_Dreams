@@ -213,27 +213,6 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Ligth" uid="9">
-                    <properties>
-                        <light-height>200</light-height>
-                        <light-radius>100</light-radius>
-                        <cast-from>Same tag</cast-from>
-                        <tag>Luz</tag>
-                    </properties>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>896</x>
-                        <y>352</y>
-                        <z>0</z>
-                        <width>50</width>
-                        <height>50</height>
-                        <depth>0</depth>
-                        <hotspotX>0.5</hotspotX>
-                        <hotspotY>0.5</hotspotY>
-                        <opacity>0.25</opacity>
-                    </world>
-                </instance>
             </instances>
             <effects />
         </layer>

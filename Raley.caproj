@@ -14,12 +14,10 @@
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
-        <plugin author="Scirra" id="shadowlight" version="1">Shadow Light</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
-        <behavior author="Scirra" id="shadowcaster" version="1">Shadow Caster</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
@@ -76,9 +74,6 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="Ligth" sid="876170710917712">
-            <plugin id="shadowlight" />
-        </object-type>
         <object-type name="Bricks" sid="828014892644307">
             <plugin id="Sprite" />
             <animation-folder>
@@ -111,12 +106,12 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="944386233776571" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\Janela (high resolution).png">
+                    <frame duration="1" hotspotX="0.657303" hotspotY="0.463542" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\Janela (high resolution).png">
                         <collision-poly>
-                            <point x="0.332341" y="0.2625" />
-                            <point x="0.585317" y="0.2625" />
-                            <point x="0.585317" y="0.685714" />
-                            <point x="0.332341" y="0.685714" />
+                            <point x="0.0243435" y="0.00173611" />
+                            <point x="0.979399" y="0.00173611" />
+                            <point x="0.979399" y="0.824652" />
+                            <point x="0.0243435" y="0.824652" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -126,12 +121,12 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="274219587443737" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\Baú de brinquedos (high resolution).png">
+                    <frame duration="1" hotspotX="0.334123" hotspotY="-1.10417" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\Baú de brinquedos (high resolution).png">
                         <collision-poly>
-                            <point x="0.372024" y="0.736607" />
-                            <point x="0.567956" y="0.736607" />
-                            <point x="0.567956" y="1" />
-                            <point x="0.372024" y="1" />
+                            <point x="0.945497" y="1" />
+                            <point x="0.00948042" y="1" />
+                            <point x="0.00948042" y="0" />
+                            <point x="0.945497" y="0" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -141,14 +136,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="280526710844350" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\Espada (high resolution).png">
-                        <collision-poly>
-                            <point x="0.917659" y="0.660714" />
-                            <point x="0.962302" y="0.660714" />
-                            <point x="0.962302" y="1" />
-                            <point x="0.917659" y="1" />
-                        </collision-poly>
-                    </frame>
+                    <frame duration="1" hotspotX="-11.8472" hotspotY="-0.558642" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\Espada (high resolution).png" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -156,12 +144,12 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="214576590755360" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\Estante (high resolution).png">
+                    <frame duration="1" hotspotX="-0.299669" hotspotY="0.333773" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\Estante (high resolution).png">
                         <collision-poly>
-                            <point x="0.880456" y="0.267857" />
-                            <point x="0.880456" y="1" />
-                            <point x="0.595238" y="1" />
-                            <point x="0.595238" y="0.267857" />
+                            <point x="0.970197" y="0" />
+                            <point x="0.970197" y="1" />
+                            <point x="0.0182115" y="1" />
+                            <point x="0.0182115" y="0" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -171,12 +159,12 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="149695840328829" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\Cama (high resolution).png">
+                    <frame duration="1" hotspotX="1.46657" hotspotY="-0.434659" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\Cama (high resolution).png">
                         <collision-poly>
-                            <point x="0" y="0.758929" />
-                            <point x="0.332341" y="0.758929" />
-                            <point x="0.332341" y="1" />
-                            <point x="0" y="1" />
+                            <point x="0.00145349" y="0.383523" />
+                            <point x="0.661336" y="0.383523" />
+                            <point x="0.661337" y="1" />
+                            <point x="0.00145349" y="1" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -188,21 +176,20 @@
                 <behavior-type name="Jumpthru" sid="708560723445478">
                     <behavior id="jumpthru" />
                 </behavior-type>
-                <behavior-type name="ShadowCaster" sid="446830478743167">
-                    <behavior id="shadowcaster" />
-                </behavior-type>
                 <behavior-type name="Platform" sid="336176678442404">
                     <behavior id="Platform" />
                 </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="215700133245266" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Characters\raley\Raley idle (high resolution).png">
+                    <frame duration="1" hotspotX="0.533264" hotspotY="0.483887" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Characters\raley\Raley idle (high resolution).png">
                         <collision-poly>
-                            <point x="0.292969" y="0" />
-                            <point x="0.683594" y="0" />
-                            <point x="0.683594" y="1" />
-                            <point x="0.292969" y="1" />
+                            <point x="0.2079" y="0" />
+                            <point x="0.779626" y="0" />
+                            <point x="1" y="0.540785" />
+                            <point x="1" y="1" />
+                            <point x="0.29106" y="1" />
+                            <point x="0" y="0.564451" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -350,7 +337,7 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="LimitWall" sid="469780680421923">
+        <object-type name="Limit" sid="469780680421923">
             <plugin id="Sprite" />
             <behaviors>
                 <behavior-type name="Solid" sid="283193636515391">
@@ -395,6 +382,38 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="760965088390801" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Interaction" sid="680667258020761">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="215318948332828" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Dark" sid="147943301380990">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="615114566765230" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="LigthWindow" sid="767307922500751">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="903085116467491" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Picture" sid="599921977472449">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="993495475959887" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
