@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Room Event</name>
     <events>
-        <include>Raley Indoors</include>
+        <include>Raley Run</include>
         <variable constant="0" name="DialogueAlreadyOpenned" sid="571714590011470" static="0" type="number">0</variable>
         <variable constant="0" name="DialogueRunning" sid="980566655660610" static="0" type="number">0</variable>
         <variable comment="Se objeto é interagivel " constant="0" name="IsInteractive" sid="258838436493578" static="0" type="number">0</variable>
