@@ -162,8 +162,8 @@
                     <frame duration="1" hotspotX="1.46657" hotspotY="-0.434659" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\Cama (high resolution).png">
                         <collision-poly>
                             <point x="0.00145349" y="0.383523" />
-                            <point x="0.661336" y="0.383523" />
-                            <point x="0.661337" y="1" />
+                            <point x="1" y="0.383523" />
+                            <point x="1" y="1" />
                             <point x="0.00145349" y="1" />
                         </collision-poly>
                     </frame>
@@ -414,6 +414,14 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="993495475959887" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Book" sid="869302999577532">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="970338685722604" speed="5">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
