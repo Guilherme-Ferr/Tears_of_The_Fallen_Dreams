@@ -10,10 +10,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Room</layout>
-        <layout order="2">Dark Forest</layout>
-        <event-sheet active="1" order="1">Room Event</event-sheet>
-        <event-sheet order="3">Dark Forest Event </event-sheet>
+        <layout active="1" order="0">Dark Forest</layout>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -24,18 +21,17 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     <families-expanded root="1" />
     <folders-expanded>
         <folder expanded="0" path="object-folder/" />
-        <folder expanded="1" path="layout-folder/" />
+        <folder expanded="0" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="event-folder/Dark Forest/" />
         <folder expanded="0" path="event-folder/Menu/" />
         <folder expanded="0" path="event-folder/Room/" />
         <folder expanded="0" path="event-folder/Generic/" />
-        <folder expanded="0" path="event-folder/Generic/Movement/" />
+        <folder expanded="1" path="event-folder/Generic/Movement/" />
         <folder expanded="0" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
-        <folder expanded="1" path="animation-folder/Grass/" />
         <folder expanded="1" path="animation-folder/Bricks/" />
         <folder expanded="1" path="animation-folder/Wall/" />
         <folder expanded="1" path="animation-folder/Window/" />

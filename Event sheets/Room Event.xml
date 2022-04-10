@@ -195,9 +195,6 @@
                         <action id="-15" name="Set visible" sid="751351149891404" type="Dialogue">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="631102100632718" type="InteractAction">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
                         <action behavior="Fade" id="2" name="Set fade-in time" sid="120366171833436" type="Fade">
                             <param id="0" name="Fade-in time">1</param>
                         </action>
@@ -208,6 +205,7 @@
                         <action id="-2" name="Go to layout" sid="989909490865574" type="System">
                             <param id="0" name="Layout">Dark Forest</param>
                         </action>
+                        <action id="-9" name="Destroy" sid="275791438799338" type="Raley" />
                     </actions>
                 </event-block>
             </sub-events>
@@ -257,9 +255,6 @@
                         <action id="0" name="Set text" sid="279671250819376" type="Dialogue">
                             <param id="0" name="Text">&quot;&quot;</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="380062807532444" type="InteractAction">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
                         <action id="-15" name="Set visible" sid="895570355869620" type="DialogueBox">
                             <param id="0" name="Visibility">0</param>
                         </action>
@@ -295,6 +290,10 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="4" name="Set animation" sid="423208141571442" type="InteractAction">
+                            <param id="0" name="Animation">&quot;Press&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="624838981196748" type="DialogueBox">
                             <param id="0" name="Visibility">1</param>
                         </action>
