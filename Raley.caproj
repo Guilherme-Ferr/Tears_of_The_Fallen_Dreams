@@ -56,7 +56,7 @@
         </object-type>
         <object-type name="Forest1" sid="678695843150308">
             <plugin id="TiledBg" />
-            <texture original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\forest2" />
+            <texture original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\Florest_export_1" />
         </object-type>
         <object-type name="Bricks" sid="828014892644307">
             <plugin id="Sprite" />
@@ -406,11 +406,11 @@
         </object-type>
         <object-type name="Forest2" sid="596282436525650">
             <plugin id="TiledBg" />
-            <texture original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\forest0" />
+            <texture original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\Florest_extend_0.png" />
         </object-type>
         <object-type name="Forest0" sid="118240658163639">
             <plugin id="TiledBg" />
-            <texture original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\forest1" />
+            <texture original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\Florest_extend_3" />
         </object-type>
         <object-type name="ForestGrass" sid="971211506481157">
             <plugin id="Tilemap" />
@@ -506,11 +506,6 @@
                     </collision-poly>
                 </tile>
             </tiles>
-        </object-type>
-        <object-type name="sas" sid="330678862818874">
-            <plugin id="Tilemap" />
-            <texture />
-            <tiles />
         </object-type>
     </object-folder>
     <families />
