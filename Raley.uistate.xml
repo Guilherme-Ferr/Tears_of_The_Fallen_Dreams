@@ -10,7 +10,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="1">Dark Forest</layout>
+        <layout order="0">Dark Forest</layout>
+        <layout active="1" order="1">Room</layout>
+        <event-sheet order="2">Room Event</event-sheet>
+        <event-sheet order="3">Dark Forest Event </event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -20,14 +23,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </properties>
     <families-expanded root="1" />
     <folders-expanded>
-        <folder expanded="1" path="object-folder/" />
+        <folder expanded="0" path="object-folder/" />
         <folder expanded="0" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
-        <folder expanded="1" path="event-folder/Dark Forest/" />
-        <folder expanded="0" path="event-folder/Menu/" />
-        <folder expanded="0" path="event-folder/Room/" />
-        <folder expanded="0" path="event-folder/Generic/" />
-        <folder expanded="1" path="event-folder/Generic/Movement/" />
+        <folder expanded="1" path="event-folder/Generic/" />
+        <folder expanded="0" path="event-folder/Generic/Movement/" />
         <folder expanded="0" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />

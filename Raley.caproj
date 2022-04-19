@@ -515,15 +515,6 @@
         <layout>Dark Forest.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-folder name="Dark Forest">
-            <event-sheet>Dark Forest Event .xml</event-sheet>
-        </event-folder>
-        <event-folder name="Menu">
-            <event-sheet>Menu Event.xml</event-sheet>
-        </event-folder>
-        <event-folder name="Room">
-            <event-sheet>Room Event.xml</event-sheet>
-        </event-folder>
         <event-folder name="Generic">
             <event-folder name="Movement">
                 <event-sheet>Raley Run.xml</event-sheet>
@@ -531,6 +522,9 @@
                 <event-sheet>Raley Action.xml</event-sheet>
             </event-folder>
         </event-folder>
+        <event-sheet>Dark Forest Event .xml</event-sheet>
+        <event-sheet>Room Event.xml</event-sheet>
+        <event-sheet>Menu Event.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="4" />

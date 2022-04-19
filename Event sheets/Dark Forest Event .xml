@@ -4,5 +4,16 @@
     <name>Dark Forest Event </name>
     <events>
         <include>Raley Run</include>
+        <event-block sid="148138585608226">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="305272848327404" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="469309667853203" type="Fade">
+                    <param id="0" name="Fade-out time">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="418184615181790" type="Fade" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
