@@ -118,9 +118,6 @@
                         <action id="-16" name="Wait" sid="260022296093424" type="System">
                             <param id="0" name="Seconds">0.85</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="227168305045989" type="Bed">
-                            <param id="0" name="Visibility">0</param>
-                        </action>
                         <action id="7" name="Set mirrored" sid="180555487930457" type="Raley">
                             <param id="0" name="State">1</param>
                         </action>
@@ -203,6 +200,10 @@
                         <action id="-9" name="Set value" sid="483082485956377" type="System">
                             <param id="0" name="Variable">DialogueRunning</param>
                             <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="527725482069687" type="System">
+                            <param id="0" name="Variable">isPlayerInteracting</param>
+                            <param id="1" name="Value">3</param>
                         </action>
                         <action id="0" name="Set text" sid="192837386079571" type="Dialogue">
                             <param id="0" name="Text">&quot;&quot;</param>
