@@ -26,21 +26,38 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="343407006521958">
+                <event-block sid="628021078058361">
                     <conditions>
-                        <condition id="2" name="Key is down" sid="567181394540324" type="Keyboard">
+                        <condition id="2" name="Key is down" sid="635895223473680" type="Keyboard">
+                            <param id="0" name="Key">68</param>
+                        </condition>
+                        <condition behavior="Platform" id="3" inverted="1" name="Is jumping" sid="259883377820694" type="Raley" />
+                        <condition behavior="Platform" id="4" inverted="1" name="Is falling" sid="632152247136743" type="Raley" />
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="458411112106797" type="Raley">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="631866875344198" type="Raley">
+                            <param id="0" name="Animation">&quot;run&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="815568879784912" type="Raley">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="285955389843611">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="147067756278413" type="Keyboard">
                             <param id="0" name="Key">68</param>
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="7" name="Set mirrored" sid="345301113360195" type="Raley">
+                        <action id="7" name="Set mirrored" sid="206666215132200" type="Raley">
                             <param id="0" name="State">1</param>
                         </action>
-                        <action id="4" name="Set animation" sid="973207810357275" type="Raley">
-                            <param id="0" name="Animation">&quot;run&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="538489306769134" type="Raley">
+                        <action behavior="Platform" id="7" name="Simulate control" sid="266463956546055" type="Raley">
                             <param id="0" name="Control">1</param>
                         </action>
                     </actions>
@@ -50,6 +67,8 @@
                         <condition id="2" name="Key is down" sid="745145913655642" type="Keyboard">
                             <param id="0" name="Key">65</param>
                         </condition>
+                        <condition behavior="Platform" id="3" inverted="1" name="Is jumping" sid="696928618784122" type="Raley" />
+                        <condition behavior="Platform" id="4" inverted="1" name="Is falling" sid="493736742158191" type="Raley" />
                     </conditions>
                     <actions>
                         <action id="7" name="Set mirrored" sid="901199922079561" type="Raley">
@@ -64,6 +83,21 @@
                         </action>
                     </actions>
                 </event-block>
+                <event-block sid="419511245778831">
+                    <conditions>
+                        <condition id="2" name="Key is down" sid="140267807709341" type="Keyboard">
+                            <param id="0" name="Key">65</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="460064449202230" type="Raley">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="406259945571771" type="Raley">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="899343672886878">
                     <conditions>
                         <condition id="0" name="On key pressed" sid="118719267875779" type="Keyboard">
@@ -71,22 +105,29 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="199276721948753" type="Raley">
-                            <param id="0" name="Animation">&quot;jump&quot;</param>
-                            <param id="1" name="From">1</param>
-                        </action>
                         <action behavior="Platform" id="7" name="Simulate control" sid="973760922206978" type="Raley">
                             <param id="0" name="Control">2</param>
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="148658798731986">
+                <event-block sid="499921708892324">
                     <conditions>
-                        <condition behavior="Platform" id="4" name="Is falling" sid="472142023302470" type="Raley" />
+                        <condition behavior="Platform" id="5" name="On jump" sid="631270875334846" type="Raley" />
                     </conditions>
                     <actions>
-                        <action id="4" name="Set animation" sid="966448825409113" type="Raley">
-                            <param id="0" name="Animation">&quot;fall&quot;</param>
+                        <action id="4" name="Set animation" sid="615489287455934" type="Raley">
+                            <param id="0" name="Animation">&quot;Jump&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="236051228453291">
+                    <conditions>
+                        <condition behavior="Platform" id="6" name="On fall" sid="803309310984540" type="Raley" />
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="499153331635261" type="Raley">
+                            <param id="0" name="Animation">&quot;Fall&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
                     </actions>

@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Dark Forest Event </name>
     <events>
-        <include>Raley Run</include>
+        <include>Raley Action</include>
         <event-block sid="148138585608226">
             <conditions>
                 <condition id="-2" name="On start of layout" sid="305272848327404" type="System" />
