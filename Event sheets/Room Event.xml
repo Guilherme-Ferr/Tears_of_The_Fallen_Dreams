@@ -3,9 +3,10 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Room Event</name>
     <events>
-        <include>Raley Action</include>
-        <variable constant="0" name="DialogueAlreadyOpenned" sid="571714590011470" static="0" type="number">0</variable>
-        <variable constant="0" name="DialogueRunning" sid="980566655660610" static="0" type="number">0</variable>
+        <include>Raley Indoors</include>
+        <variable comment="Se está interagindo com objetos" constant="0" name="isPlayerInteracting" sid="270757858650848" static="0" type="number">0</variable>
+        <variable comment="Se o dialogo já foi aberto" constant="0" name="DialogueAlreadyOpenned" sid="571714590011470" static="0" type="number">0</variable>
+        <variable comment="Qual dialogo esta rodando no momento" constant="0" name="DialogueRunning" sid="980566655660610" static="0" type="number">0</variable>
         <variable comment="Se objeto é interagivel " constant="0" name="IsInteractive" sid="258838436493578" static="0" type="number">0</variable>
         <event-group description="" sid="367433463849267" title="DialogueBed">
             <sub-events>
@@ -106,6 +107,29 @@
                         <action id="-9" name="Set value" sid="924880130979294" type="System">
                             <param id="0" name="Variable">DialogueAlreadyOpenned</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="621987863125663" type="Raley">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="410150447658026" type="System">
+                            <param id="0" name="Variable">isPlayerInteracting</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="260022296093424" type="System">
+                            <param id="0" name="Seconds">0.85</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="227168305045989" type="Bed">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="180555487930457" type="Raley">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="742723858984624" type="Raley">
+                            <param id="0" name="Animation">&quot;Sleep&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="980661375450732" type="Raley">
+                            <param id="0" name="X">462</param>
                         </action>
                     </actions>
                 </event-block>
@@ -309,6 +333,10 @@
                         </action>
                         <action id="-9" name="Set value" sid="776451011083733" type="System">
                             <param id="0" name="Variable">DialogueAlreadyOpenned</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="871850641724799" type="System">
+                            <param id="0" name="Variable">isPlayerInteracting</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
@@ -635,6 +663,10 @@
                         <action id="-15" name="Set visible" sid="909884132599855" type="NextQuote">
                             <param id="0" name="Visibility">0</param>
                         </action>
+                        <action id="-9" name="Set value" sid="521823152510169" type="System">
+                            <param id="0" name="Variable">isPlayerInteracting</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="265731484030359">
@@ -835,6 +867,10 @@
                             <param id="0" name="Variable">DialogueAlreadyOpenned</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="-9" name="Set value" sid="648674784722850" type="System">
+                            <param id="0" name="Variable">isPlayerInteracting</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="935569638506126">
@@ -904,6 +940,10 @@
                         </action>
                         <action id="-15" name="Set visible" sid="127053610342514" type="NextQuote">
                             <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="491512221476981" type="System">
+                            <param id="0" name="Variable">isPlayerInteracting</param>
+                            <param id="1" name="Value">2</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1105,6 +1145,17 @@
                             <param id="0" name="Variable">DialogueAlreadyOpenned</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="-9" name="Set value" sid="935843769074073" type="System">
+                            <param id="0" name="Variable">isPlayerInteracting</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="502316757587577" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="612004514096447" type="System">
+                            <param id="0" name="Variable">isPlayerInteracting</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="145616931522293">
@@ -1297,6 +1348,10 @@
                             <param id="0" name="Variable">DialogueAlreadyOpenned</param>
                             <param id="1" name="Value">1</param>
                         </action>
+                        <action id="-9" name="Set value" sid="504799175519222" type="System">
+                            <param id="0" name="Variable">isPlayerInteracting</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="905232525910849">
@@ -1366,6 +1421,10 @@
                         </action>
                         <action id="-15" name="Set visible" sid="534485572061539" type="NextQuote">
                             <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="506819434241404" type="System">
+                            <param id="0" name="Variable">isPlayerInteracting</param>
+                            <param id="1" name="Value">2</param>
                         </action>
                     </actions>
                 </event-block>

@@ -5,6 +5,20 @@
     <events>
         <event-group description="General moviments of the main character" sid="136027041383608" title="MovementWalk">
             <sub-events>
+                <event-block sid="525147206750301">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="872647592052890" type="System">
+                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="420476501714844" type="Raley">
+                            <param id="0" name="State">1</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-block sid="901702044849552">
                     <conditions>
                         <condition id="-2" name="On start of layout" sid="582476122032660" type="System" />
@@ -18,6 +32,16 @@
                 <event-block sid="197228810711010">
                     <conditions>
                         <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="396437007236257" type="Raley" />
+                        <condition id="-14" name="Compare variable" sid="831766898527935" type="System">
+                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="877989986736539" type="System">
+                            <param id="0" name="Variable">isPlayerInteracting</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="950827339837315" type="Raley">
@@ -30,6 +54,11 @@
                     <conditions>
                         <condition id="2" name="Key is down" sid="862858967284923" type="Keyboard">
                             <param id="0" name="Key">68</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="208103013060436" type="System">
+                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -50,17 +79,63 @@
                         <condition id="2" name="Key is down" sid="331300886567220" type="Keyboard">
                             <param id="0" name="Key">65</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="628426142487020" type="System">
+                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="7" name="Set mirrored" sid="335721200834367" type="Raley">
                             <param id="0" name="State">0</param>
                         </action>
-                        <action id="4" name="Set animation" sid="188645989722114" type="Raley">
+                        <action id="4" name="Set animation" sid="132282376388161" type="Raley">
                             <param id="0" name="Animation">&quot;walk&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action behavior="Platform" id="7" name="Simulate control" sid="655980969383008" type="Raley">
+                        <action behavior="Platform" id="7" name="Simulate control" sid="486147811190736" type="Raley">
                             <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="738210354793206">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="898379997366936" type="System">
+                            <param id="0" name="Variable">isPlayerInteracting</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="11" name="Set enabled" sid="578516822195023" type="Raley">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="261162863179717" type="Raley">
+                            <param id="0" name="Animation">&quot;InteractIn&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="668002771565305" type="System">
+                            <param id="0" name="Variable">isPlayerInteracting</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="962645706898274">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="456216935857273" type="System">
+                            <param id="0" name="Variable">isPlayerInteracting</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="586918336845074" type="Raley">
+                            <param id="0" name="Animation">&quot;InteractOut&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="623792785891872" type="System">
+                            <param id="0" name="Variable">isPlayerInteracting</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>
