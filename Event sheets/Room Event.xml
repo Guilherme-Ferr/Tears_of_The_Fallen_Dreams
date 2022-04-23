@@ -116,7 +116,7 @@
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-16" name="Wait" sid="260022296093424" type="System">
-                            <param id="0" name="Seconds">0.85</param>
+                            <param id="0" name="Seconds">1</param>
                         </action>
                         <action id="7" name="Set mirrored" sid="180555487930457" type="Raley">
                             <param id="0" name="State">1</param>
