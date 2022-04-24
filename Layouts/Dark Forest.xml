@@ -226,8 +226,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>992</x>
-                        <y>2528</y>
+                        <x>256</x>
+                        <y>2816</y>
                         <z>0</z>
                         <width>320</width>
                         <height>320</height>
@@ -369,7 +369,7 @@
                                 <active-at-start>No</active-at-start>
                                 <fade-in-time>0</fade-in-time>
                                 <wait-time>0</wait-time>
-                                <fade-out-time>1.5</fade-out-time>
+                                <fade-out-time>2.5</fade-out-time>
                                 <destroy>No</destroy>
                             </properties>
                         </behavior-instance>

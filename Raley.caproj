@@ -10,6 +10,7 @@
     <unique-id>2ktxamtg3fzd4</unique-id>
     <saved-with-version>28000</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
@@ -578,7 +579,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="194041819513833" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.400156" hotspotY="0.400156" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\UI\ButtonPress" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -586,7 +587,7 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="760965088390801" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.400156" hotspotY="0.400156" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\UI\ButtonPress" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -757,6 +758,9 @@
                 </tile>
             </tiles>
         </object-type>
+        <object-type name="Audio" sid="624348185780528">
+            <plugin id="Audio" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -777,9 +781,25 @@
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="4" />
+        <global-instance type="Audio" uid="5">
+            <properties>
+                <timescale-audio>Off</timescale-audio>
+                <saveload>All</saveload>
+                <play-in-background>No</play-in-background>
+                <positioned-audio></positioned-audio>
+                <panning-model>HRTF</panning-model>
+                <distance-model>Inverse</distance-model>
+                <listener-z-height>600</listener-z-height>
+                <reference-distance>600</reference-distance>
+                <maximum-distance>10000</maximum-distance>
+                <roll-off-factor>1</roll-off-factor>
+            </properties>
+        </global-instance>
     </global-instances>
     <sounds-folder />
-    <music-folder />
+    <music-folder>
+        <file name="Main Menu Theme.ogg" />
+    </music-folder>
     <files-folder>
         <file-folder name="Icons">
             <file name="icon-16.png" />
