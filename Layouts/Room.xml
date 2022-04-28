@@ -542,7 +542,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>832</x>
+                        <x>768</x>
                         <y>1144</y>
                         <z>0</z>
                         <width>416</width>
@@ -647,10 +647,10 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1147</x>
-                        <y>512</y>
+                        <y>480</y>
                         <z>0</z>
                         <width>1888</width>
-                        <height>352</height>
+                        <height>288</height>
                         <depth>0</depth>
                         <hotspotX>0.5</hotspotX>
                         <hotspotY>0.5</hotspotY>
@@ -663,7 +663,7 @@
                         <character-width>16</character-width>
                         <character-height>16</character-height>
                         <character-set>ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.,;:?!-_~#&quot;&apos;&amp;()[]|`\/@°+=*$£€&lt;&gt;</character-set>
-                        <text>- A GUERRA ESTA CHEGANDO ATE YORLAN, AS BAIXAS DO NOSSO CLA JA CHEGARAM A MAIS DE 112, PECO A TODOS OS SOBREVIVENTES QUE SALVEM SUAS FILHAS E ESPOSAS. PECO QUE TODOS OS HOMENS HONREM SUA ORIGEM NASCIDA DA BATALHA E NOS AJUDEM NA LINHA DE FRENTE.</text>
+                        <text>- A GUERRA ESTA CHEGANDO ATE YORLAN, AS BAIXAS DO NOSSO CLA JA CHEGARAM A MAIS DE 112, PECO A TODOS OS SOBREVIVENTES QUE SALVEM SUAS FILHAS E ESPOSAS.</text>
                         <scale>2.5</scale>
                         <initial-visibility>Invisible</initial-visibility>
                         <horizontal-alignment>Left</horizontal-alignment>
@@ -676,11 +676,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>219</x>
+                        <x>475</x>
                         <y>352</y>
                         <z>0</z>
-                        <width>1856</width>
-                        <height>320</height>
+                        <width>1600</width>
+                        <height>224</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -721,7 +721,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>2016</x>
-                        <y>614</y>
+                        <y>544</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
@@ -743,13 +743,35 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>2016</x>
-                        <y>613</y>
+                        <y>544</y>
                         <z>0</z>
                         <width>64</width>
                         <height>64</height>
                         <depth>0</depth>
                         <hotspotX>0.400156021</hotspotX>
                         <hotspotY>0.400156021</hotspotY>
+                        <angle>0</angle>
+                        <opacity>1</opacity>
+                    </world>
+                </instance>
+                <instance type="RaleyIconDialog" uid="6">
+                    <properties>
+                        <initial-visibility>Invisible</initial-visibility>
+                        <initial-animation>Default</initial-animation>
+                        <initial-frame>0</initial-frame>
+                        <collisions>Enabled</collisions>
+                    </properties>
+                    <blend-mode>0</blend-mode>
+                    <effect-fallback>0</effect-fallback>
+                    <world>
+                        <x>352</x>
+                        <y>480</y>
+                        <z>0</z>
+                        <width>200</width>
+                        <height>200</height>
+                        <depth>0</depth>
+                        <hotspotX>0.5</hotspotX>
+                        <hotspotY>0.5</hotspotY>
                         <angle>0</angle>
                         <opacity>1</opacity>
                     </world>

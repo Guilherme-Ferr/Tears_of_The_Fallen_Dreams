@@ -91,6 +91,9 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-15" name="Set visible" sid="172349272155726" type="RaleyIconDialog">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="412580786789324" type="DialogueBox">
                             <param id="0" name="Visibility">1</param>
                         </action>
@@ -193,6 +196,9 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-15" name="Set visible" sid="917072304522836" type="RaleyIconDialog">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                         <action id="-9" name="Set value" sid="101091710542983" type="System">
                             <param id="0" name="Variable">DialogueAlreadyOpenned</param>
                             <param id="1" name="Value">1</param>
@@ -339,6 +345,9 @@
                         <action id="-9" name="Set value" sid="871850641724799" type="System">
                             <param id="0" name="Variable">isPlayerInteracting</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="576168013992151" type="RaleyIconDialog">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -764,6 +773,9 @@
                         <action id="-15" name="Set visible" sid="417540735377444" type="Dialogue">
                             <param id="0" name="Visibility">0</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="195809107221564" type="RaleyIconDialog">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -851,6 +863,9 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-15" name="Set visible" sid="138256350704525" type="RaleyIconDialog">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="411797061222740" type="DialogueBox">
                             <param id="0" name="Visibility">1</param>
                         </action>
@@ -892,7 +907,7 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="492884174637788" type="Dialogue">
-                            <param id="0" name="Text">left(&quot;-A GUERRA ESTA CHEGANDO ATE YORLAN, AS BAIXAS DO NOSSO CLA JA CHEGARAM A MAIS DE 112, PECO A TODOS OS SOBREVIVENTES QUE SALVEM SUAS FILHAS E ESPOSAS. PECO QUE TODOS OS HOMENS HONREM SUA ORIGEM NASCIDA DA BATALHA E NOS AJUDEM NA LINHA DE FRENTE.&quot;, len(Dialogue.Text) + 1)</param>
+                            <param id="0" name="Text">left(&quot;-A GUERRA ESTA CHEGANDO ATE YORLAN, AS BAIXAS DO NOSSO CLA JA CHEGARAM A MAIS DE 112, PECO A TODOS OS SOBREVIVENTES QUE SALVEM SUAS FILHAS E ESPOSAS...&quot;, len(Dialogue.Text) + 1)</param>
                         </action>
                     </actions>
                 </event-block>
@@ -901,7 +916,7 @@
                         <condition id="-8" name="Compare two values" sid="822225911908236" type="System">
                             <param id="0" name="First value">len(Dialogue.Text)</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">244</param>
+                            <param id="2" name="Second value">151</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="821458268541290" type="System">
                             <param id="0" name="Variable">IsInteractive</param>
@@ -928,7 +943,7 @@
                         <condition id="-8" name="Compare two values" sid="264584665831840" type="System">
                             <param id="0" name="First value">len(Dialogue.Text)</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Second value">244</param>
+                            <param id="2" name="Second value">151</param>
                         </condition>
                     </conditions>
                     <actions>
@@ -941,10 +956,6 @@
                         </action>
                         <action id="-15" name="Set visible" sid="127053610342514" type="NextQuote">
                             <param id="0" name="Visibility">0</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="491512221476981" type="System">
-                            <param id="0" name="Variable">isPlayerInteracting</param>
-                            <param id="1" name="Value">2</param>
                         </action>
                     </actions>
                 </event-block>
@@ -966,9 +977,91 @@
                     </conditions>
                     <actions>
                         <action id="0" name="Set text" sid="773662802972541" type="Dialogue">
-                            <param id="0" name="Text">left(&quot;ESSA FOI A ULTIMA MENSAGEM QUE RECEBEMOS ANTES DELES PARTIREM.&quot;, len(Dialogue.Text) + 1)</param>
+                            <param id="0" name="Text">left(&quot;...PECO QUE TODOS OS HOMENS HONREM SUA ORIGEM NASCIDA DA BATALHA E NOS AJUDEM NA LINHA DE FRENTE.&quot;, len(Dialogue.Text) + 1)</param>
                         </action>
                         <action id="-15" name="Set visible" sid="529618484811098" type="NextQuote">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="208915889266641">
+                    <conditions>
+                        <condition id="-8" name="Compare two values" sid="419415240591872" type="System">
+                            <param id="0" name="First value">len(Dialogue.Text)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">97</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="923873285081783" type="System">
+                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="105028405952972" type="System">
+                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="989553267426747" type="NextQuote">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="931853720573659">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="728643075831521" type="Keyboard">
+                            <param id="0" name="Key">70</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="841517688894022" type="System">
+                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="400953020286503" type="System">
+                            <param id="0" name="First value">len(Dialogue.Text)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">97</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="708682595585646" type="System">
+                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="0" name="Set text" sid="858683910376024" type="Dialogue">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="903508146088723" type="NextQuote">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="491512221476981" type="System">
+                            <param id="0" name="Variable">isPlayerInteracting</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="303002400352238">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="800550926737354" type="System">
+                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="330175707552090" type="System">
+                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="575067748654422" type="System">
+                            <param id="0" name="Interval (seconds)">0.03</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="914030259733138" type="Dialogue">
+                            <param id="0" name="Text">left(&quot;ESSA FOI A ULTIMA MENSAGEM QUE RECEBEMOS ANTES DELES PARTIREM.&quot;, len(Dialogue.Text) + 1)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="498861443484872" type="NextQuote">
                             <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
@@ -978,7 +1071,7 @@
                         <condition id="-14" name="Compare variable" sid="273962658550762" type="System">
                             <param id="0" name="Variable">DialogueRunning</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">2</param>
+                            <param id="2" name="Value">3</param>
                         </condition>
                         <condition id="-8" name="Compare two values" sid="985065191227025" type="System">
                             <param id="0" name="First value">len(Dialogue.Text)</param>
@@ -1005,7 +1098,7 @@
                         <condition id="-14" name="Compare variable" sid="952802603560018" type="System">
                             <param id="0" name="Variable">DialogueRunning</param>
                             <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">2</param>
+                            <param id="2" name="Value">3</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="426075676772949" type="System">
                             <param id="0" name="Variable">IsInteractive</param>
@@ -1040,6 +1133,9 @@
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-15" name="Set visible" sid="941816054684344" type="Dialogue">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="714423368848959" type="RaleyIconDialog">
                             <param id="0" name="Visibility">0</param>
                         </action>
                     </actions>
@@ -1129,6 +1225,9 @@
                         </condition>
                     </conditions>
                     <actions>
+                        <action id="-15" name="Set visible" sid="148464823807179" type="RaleyIconDialog">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="701517599303223" type="DialogueBox">
                             <param id="0" name="Visibility">1</param>
                         </action>
@@ -1245,6 +1344,9 @@
                         <action id="-15" name="Set visible" sid="615243873298491" type="Dialogue">
                             <param id="0" name="Visibility">0</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="505306704750486" type="RaleyIconDialog">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -1352,6 +1454,9 @@
                         <action id="-9" name="Set value" sid="504799175519222" type="System">
                             <param id="0" name="Variable">isPlayerInteracting</param>
                             <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="400377849382785" type="RaleyIconDialog">
+                            <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -1523,6 +1628,9 @@
                         <action id="-15" name="Set visible" sid="227707607011755" type="Dialogue">
                             <param id="0" name="Visibility">0</param>
                         </action>
+                        <action id="-15" name="Set visible" sid="757807381992506" type="RaleyIconDialog">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
                     </actions>
                 </event-block>
             </sub-events>
@@ -1546,6 +1654,9 @@
                 <condition id="-2" name="On start of layout" sid="522693161217103" type="System" />
             </conditions>
             <actions>
+                <action id="-16" name="Wait" sid="441330207011074" type="System">
+                    <param id="0" name="Seconds">0.1</param>
+                </action>
                 <action id="0" name="Play" sid="181618451085361" type="Audio">
                     <param id="0" name="Audio file">Main Menu Theme</param>
                     <param id="2" name="Loop">1</param>
