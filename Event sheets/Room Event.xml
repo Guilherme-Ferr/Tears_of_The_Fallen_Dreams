@@ -5,9 +5,9 @@
     <events>
         <include>Raley Indoors</include>
         <variable comment="Se está interagindo com objetos" constant="0" name="isPlayerInteracting" sid="270757858650848" static="0" type="number">0</variable>
-        <variable comment="Se o dialogo já foi aberto" constant="0" name="DialogueAlreadyOpenned" sid="571714590011470" static="0" type="number">0</variable>
-        <variable comment="Qual dialogo esta rodando no momento" constant="0" name="DialogueRunning" sid="980566655660610" static="0" type="number">0</variable>
-        <variable comment="Se objeto é interagivel " constant="0" name="IsInteractive" sid="258838436493578" static="0" type="number">0</variable>
+        <variable comment="Se o dialogo já foi aberto" constant="0" name="dialogueAlreadyOpenned" sid="571714590011470" static="0" type="number">0</variable>
+        <variable comment="Qual dialogo esta rodando no momento" constant="0" name="dialogueRunning" sid="980566655660610" static="0" type="number">0</variable>
+        <variable comment="Se objeto é interagivel " constant="0" name="isInteractive" sid="258838436493578" static="0" type="number">0</variable>
         <event-group description="" sid="367433463849267" title="DialogueBed">
             <sub-events>
                 <event-block sid="616936407530789">
@@ -21,7 +21,7 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="441159039499606" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-15" name="Set visible" sid="650863919566017" type="InteractAction">
@@ -43,11 +43,11 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="529633139776179" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="420704126148189" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="0" name="Set text" sid="960458694054717" type="Dialogue">
@@ -69,7 +69,7 @@
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="673772052781242" type="System">
-                            <param id="0" name="Variable">DialogueAlreadyOpenned</param>
+                            <param id="0" name="Variable">dialogueAlreadyOpenned</param>
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>
@@ -80,12 +80,12 @@
                             <param id="0" name="Key">70</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="441970895908931" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="328673653098659" type="System">
-                            <param id="0" name="Variable">DialogueAlreadyOpenned</param>
+                            <param id="0" name="Variable">dialogueAlreadyOpenned</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
@@ -104,11 +104,11 @@
                             <param id="0" name="Text">&quot;&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="926671279965825" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-9" name="Set value" sid="924880130979294" type="System">
-                            <param id="0" name="Variable">DialogueAlreadyOpenned</param>
+                            <param id="0" name="Variable">dialogueAlreadyOpenned</param>
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="7" name="Set mirrored" sid="621987863125663" type="Raley">
@@ -129,19 +129,19 @@
                             <param id="1" name="From">1</param>
                         </action>
                         <action id="-1" name="Set X" sid="980661375450732" type="Raley">
-                            <param id="0" name="X">462</param>
+                            <param id="0" name="X">496</param>
                         </action>
                     </actions>
                 </event-block>
                 <event-block sid="739389148525112">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="856535598787437" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="595289930068247" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
@@ -158,7 +158,7 @@
                 <event-block sid="925931444039102">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="896080192697498" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
@@ -180,7 +180,7 @@
                             <param id="0" name="Key">70</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="357489727242401" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
@@ -190,7 +190,7 @@
                             <param id="2" name="Second value">52</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="337510725674113" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
@@ -200,11 +200,11 @@
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="101091710542983" type="System">
-                            <param id="0" name="Variable">DialogueAlreadyOpenned</param>
+                            <param id="0" name="Variable">dialogueAlreadyOpenned</param>
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-9" name="Set value" sid="483082485956377" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Value">2</param>
                         </action>
                         <action id="-9" name="Set value" sid="527725482069687" type="System">
@@ -241,6 +241,239 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="561912204861913" title="DialogueWakeUp">
+            <sub-events>
+                <event-block sid="360492315828383">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="274492358505092" type="Raley">
+                            <param id="0" name="Object">Interaction</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="219152683306186" type="Interaction">
+                            <param id="0" name="Object">Bed</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="332344337014121" type="System">
+                            <param id="0" name="Variable">isInteractive</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="641090884190088" type="InteractAction">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="778601314398773" type="InteractAction">
+                            <param id="0" name="X">Raley.X</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="641614560872888" type="InteractAction">
+                            <param id="0" name="Y">Raley.Y - 300</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="555068792758596">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="747698251517626" type="Raley">
+                            <param id="0" name="Object">Interaction</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="703861812013831" type="System">
+                            <param id="0" name="Variable">isInteractive</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="705233954734059" type="System">
+                            <param id="0" name="Variable">dialogueRunning</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="191744073927642" type="Dialogue">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="212873631092179" type="InteractAction">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="559995671414585" type="DialogueBox">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="617170624405741" type="Dialogue">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="745202741011157" type="NextQuote">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="843071276815142" type="CloseQuote">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="549713047412298" type="System">
+                            <param id="0" name="Variable">dialogueAlreadyOpenned</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="688154584463171">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="800886445493288" type="Keyboard">
+                            <param id="0" name="Key">70</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="317344286116831" type="System">
+                            <param id="0" name="Variable">isInteractive</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="142037139717810" type="System">
+                            <param id="0" name="Variable">dialogueAlreadyOpenned</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="263801584150280" type="RaleyIconDialog">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="997927352649064" type="DialogueBox">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="230178144771271" type="Dialogue">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="0" name="Set text" sid="871787898629163" type="Dialogue">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="933099365428744" type="System">
+                            <param id="0" name="Variable">dialogueRunning</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="230097782241189" type="System">
+                            <param id="0" name="Variable">dialogueAlreadyOpenned</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="957458696672748" type="Raley">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="795330585681418" type="System">
+                            <param id="0" name="Variable">isPlayerInteracting</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="140863122196436" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="7" name="Set mirrored" sid="859022072505243" type="Raley">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="987586759081206" type="Raley">
+                            <param id="0" name="Animation">&quot;Sleep&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="640188715604718" type="Raley">
+                            <param id="0" name="X">496</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="477481182807197">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="731662546383194" type="System">
+                            <param id="0" name="Variable">dialogueRunning</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="290227111825808" type="System">
+                            <param id="0" name="Variable">isInteractive</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="691679246412012" type="System">
+                            <param id="0" name="Interval (seconds)">0.03</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="982434583982608" type="Dialogue">
+                            <param id="0" name="Text">left(&quot;ACHO MELHOR DORMIR POR HORA, ESTOU MORTA DE CANSACO.&quot;, len(Dialogue.Text) + 1)</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="793733424954085">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="570380269997790" type="System">
+                            <param id="0" name="Variable">isInteractive</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="324525823992680" type="System">
+                            <param id="0" name="First value">len(Dialogue.Text)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">52</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="164501458285150" type="CloseQuote">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="105510528581964">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="846659902298750" type="Keyboard">
+                            <param id="0" name="Key">70</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="203000803715908" type="System">
+                            <param id="0" name="Variable">isInteractive</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="340702481067062" type="System">
+                            <param id="0" name="First value">len(Dialogue.Text)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">52</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="826205121438767" type="System">
+                            <param id="0" name="Variable">dialogueRunning</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="804381651794034" type="RaleyIconDialog">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="535504313213580" type="System">
+                            <param id="0" name="Variable">dialogueAlreadyOpenned</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="567025298152621" type="System">
+                            <param id="0" name="Variable">dialogueRunning</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="567806077459711" type="System">
+                            <param id="0" name="Variable">isPlayerInteracting</param>
+                            <param id="1" name="Value">3</param>
+                        </action>
+                        <action id="0" name="Set text" sid="225109714809514" type="Dialogue">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="169636671157841" type="NextQuote">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="971771383268079" type="CloseQuote">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="844670117992002" type="DialogueBox">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="852193691165560" type="Dialogue">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action behavior="Fade" id="2" name="Set fade-in time" sid="510379653695380" type="Fade">
+                            <param id="0" name="Fade-in time">3</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="863404929265406" type="Fade" />
+                        <action id="-16" name="Wait" sid="470235030156079" type="System">
+                            <param id="0" name="Seconds">3</param>
+                        </action>
+                        <action id="-2" name="Go to layout" sid="578490623929020" type="System">
+                            <param id="0" name="Layout">Dark Forest</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="200877372746596" type="Raley" />
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
         <event-group description="" sid="413742952237180" title="DialogueChest">
             <sub-events>
                 <event-block sid="300229238711723">
@@ -248,13 +481,13 @@
                         <condition id="1" name="Is overlapping another object" sid="283613209924647" type="Raley">
                             <param id="0" name="Object">Interaction</param>
                         </condition>
-                        <condition id="1" name="Is overlapping another object" sid="195013519023565" type="Interaction">
+                        <condition id="1" name="Is overlapping another object" sid="284510099768958" type="Interaction">
                             <param id="0" name="Object">Chest</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="626840446291534" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Value">2</param>
                         </action>
                         <action id="-15" name="Set visible" sid="956710061268866" type="InteractAction">
@@ -276,11 +509,11 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="262988054797393" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="938045536177175" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="0" name="Set text" sid="279671250819376" type="Dialogue">
@@ -299,7 +532,7 @@
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="196943387944217" type="System">
-                            <param id="0" name="Variable">DialogueAlreadyOpenned</param>
+                            <param id="0" name="Variable">dialogueAlreadyOpenned</param>
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>
@@ -310,12 +543,12 @@
                             <param id="0" name="Key">70</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="388311110739230" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="326759779858690" type="System">
-                            <param id="0" name="Variable">DialogueAlreadyOpenned</param>
+                            <param id="0" name="Variable">dialogueAlreadyOpenned</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
@@ -335,11 +568,11 @@
                             <param id="0" name="Text">&quot;&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="472581125802513" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-9" name="Set value" sid="776451011083733" type="System">
-                            <param id="0" name="Variable">DialogueAlreadyOpenned</param>
+                            <param id="0" name="Variable">dialogueAlreadyOpenned</param>
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-9" name="Set value" sid="871850641724799" type="System">
@@ -354,12 +587,12 @@
                 <event-block sid="851531192660164">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="981085389982901" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="698564376786182" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
@@ -376,7 +609,7 @@
                 <event-block sid="243440342850419">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="889654651351914" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
@@ -386,7 +619,7 @@
                             <param id="2" name="Second value">100</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="869442325876898" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
@@ -408,14 +641,14 @@
                             <param id="2" name="Second value">100</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="931445918355809" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="548590446033545" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Value">2</param>
                         </action>
                         <action id="0" name="Set text" sid="974925192723740" type="Dialogue">
@@ -429,12 +662,12 @@
                 <event-block sid="609043822327156">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="677442951092553" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="580987613378509" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
@@ -454,7 +687,7 @@
                 <event-block sid="466466816191945">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="648084153977251" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
@@ -464,7 +697,7 @@
                             <param id="2" name="Second value">58</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="372933317498837" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
@@ -481,12 +714,12 @@
                             <param id="0" name="Key">70</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="696594116545236" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="230459625364332" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
@@ -498,7 +731,7 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="802615372522853" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Value">3</param>
                         </action>
                         <action id="0" name="Set text" sid="225979931829973" type="Dialogue">
@@ -512,12 +745,12 @@
                 <event-block sid="594470821295903">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="137476415012454" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">3</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="998380335217399" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
@@ -537,7 +770,7 @@
                 <event-block sid="155297130578685">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="434645427102921" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">3</param>
                         </condition>
@@ -547,7 +780,7 @@
                             <param id="2" name="Second value">80</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="927076491732889" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
@@ -564,12 +797,12 @@
                             <param id="0" name="Key">70</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="402004138102179" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">3</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="875423732914279" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
@@ -581,7 +814,7 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="443288192024613" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Value">4</param>
                         </action>
                         <action id="0" name="Set text" sid="643767225796110" type="Dialogue">
@@ -595,12 +828,12 @@
                 <event-block sid="761449453727300">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="213807849280021" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">4</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="765228186192904" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
@@ -620,7 +853,7 @@
                 <event-block sid="650209415968259">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="600895924293982" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">4</param>
                         </condition>
@@ -630,7 +863,7 @@
                             <param id="2" name="Second value">93</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="985827349743890" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
@@ -647,12 +880,12 @@
                             <param id="0" name="Key">70</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="511510586387879" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">4</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="300920322652926" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
@@ -664,7 +897,7 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="645834070466165" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Value">5</param>
                         </action>
                         <action id="0" name="Set text" sid="310269563711768" type="Dialogue">
@@ -682,12 +915,12 @@
                 <event-block sid="265731484030359">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="457865777716082" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">5</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="125063172036958" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
@@ -707,7 +940,7 @@
                 <event-block sid="458546571727615">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="162677050662078" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">5</param>
                         </condition>
@@ -717,7 +950,7 @@
                             <param id="2" name="Second value">135</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="342906982710054" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
@@ -734,12 +967,12 @@
                             <param id="0" name="Key">70</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="819960386878230" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">5</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="992858487734930" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
@@ -751,11 +984,11 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="789608283736822" type="System">
-                            <param id="0" name="Variable">DialogueAlreadyOpenned</param>
+                            <param id="0" name="Variable">dialogueAlreadyOpenned</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="546710127187324" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="0" name="Set text" sid="558313519473911" type="Dialogue">
@@ -793,7 +1026,7 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="497832807935644" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Value">3</param>
                         </action>
                         <action id="-15" name="Set visible" sid="458363275809327" type="InteractAction">
@@ -815,11 +1048,11 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="535496961168780" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="679825591437130" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="0" name="Set text" sid="196629550449458" type="Dialogue">
@@ -841,7 +1074,7 @@
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="310238719268266" type="System">
-                            <param id="0" name="Variable">DialogueAlreadyOpenned</param>
+                            <param id="0" name="Variable">dialogueAlreadyOpenned</param>
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>
@@ -852,12 +1085,12 @@
                             <param id="0" name="Key">70</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="769117821627412" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">3</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="236179490455791" type="System">
-                            <param id="0" name="Variable">DialogueAlreadyOpenned</param>
+                            <param id="0" name="Variable">dialogueAlreadyOpenned</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
@@ -876,11 +1109,11 @@
                             <param id="0" name="Text">&quot;&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="701871482596203" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-9" name="Set value" sid="250769264489568" type="System">
-                            <param id="0" name="Variable">DialogueAlreadyOpenned</param>
+                            <param id="0" name="Variable">dialogueAlreadyOpenned</param>
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-9" name="Set value" sid="648674784722850" type="System">
@@ -892,12 +1125,12 @@
                 <event-block sid="935569638506126">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="177256286281944" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="267215168952319" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">3</param>
                         </condition>
@@ -919,7 +1152,7 @@
                             <param id="2" name="Second value">151</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="821458268541290" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">3</param>
                         </condition>
@@ -936,7 +1169,7 @@
                             <param id="0" name="Key">70</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="956139162515675" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">3</param>
                         </condition>
@@ -948,7 +1181,7 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="593864381820694" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Value">2</param>
                         </action>
                         <action id="0" name="Set text" sid="722383815653422" type="Dialogue">
@@ -962,12 +1195,12 @@
                 <event-block sid="305885743995941">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="296306259391616" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="594254331975217" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">3</param>
                         </condition>
@@ -992,12 +1225,12 @@
                             <param id="2" name="Second value">97</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="923873285081783" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">3</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="105028405952972" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
@@ -1014,7 +1247,7 @@
                             <param id="0" name="Key">70</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="841517688894022" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">3</param>
                         </condition>
@@ -1026,7 +1259,7 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="708682595585646" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Value">3</param>
                         </action>
                         <action id="0" name="Set text" sid="858683910376024" type="Dialogue">
@@ -1044,12 +1277,12 @@
                 <event-block sid="303002400352238">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="800550926737354" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">3</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="330175707552090" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">3</param>
                         </condition>
@@ -1069,7 +1302,7 @@
                 <event-block sid="602291052812023">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="273962658550762" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">3</param>
                         </condition>
@@ -1079,7 +1312,7 @@
                             <param id="2" name="Second value">62</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="514431760712858" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">3</param>
                         </condition>
@@ -1096,12 +1329,12 @@
                             <param id="0" name="Key">70</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="952802603560018" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">3</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="426075676772949" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">3</param>
                         </condition>
@@ -1113,11 +1346,11 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="244774063720577" type="System">
-                            <param id="0" name="Variable">DialogueAlreadyOpenned</param>
+                            <param id="0" name="Variable">dialogueAlreadyOpenned</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="396598131838532" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="0" name="Set text" sid="729530530291253" type="Dialogue">
@@ -1155,7 +1388,7 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="429645934197861" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Value">4</param>
                         </action>
                         <action id="-15" name="Set visible" sid="674086310628790" type="InteractAction">
@@ -1177,11 +1410,11 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="393708561283799" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="649269495392268" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="0" name="Set text" sid="640098074204063" type="Dialogue">
@@ -1203,7 +1436,7 @@
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="738452600476597" type="System">
-                            <param id="0" name="Variable">DialogueAlreadyOpenned</param>
+                            <param id="0" name="Variable">dialogueAlreadyOpenned</param>
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>
@@ -1214,12 +1447,12 @@
                             <param id="0" name="Key">70</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="520173680841062" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">4</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="954474675283192" type="System">
-                            <param id="0" name="Variable">DialogueAlreadyOpenned</param>
+                            <param id="0" name="Variable">dialogueAlreadyOpenned</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
@@ -1238,11 +1471,11 @@
                             <param id="0" name="Text">&quot;&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="490139246732695" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-9" name="Set value" sid="179891036788902" type="System">
-                            <param id="0" name="Variable">DialogueAlreadyOpenned</param>
+                            <param id="0" name="Variable">dialogueAlreadyOpenned</param>
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-9" name="Set value" sid="935843769074073" type="System">
@@ -1261,12 +1494,12 @@
                 <event-block sid="145616931522293">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="638863757822027" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="471047169505080" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">4</param>
                         </condition>
@@ -1288,7 +1521,7 @@
                             <param id="2" name="Second value">72</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="533696534775284" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">4</param>
                         </condition>
@@ -1310,23 +1543,23 @@
                             <param id="2" name="Second value">72</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="701205114006580" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">4</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="550175669197989" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="499627323879364" type="System">
-                            <param id="0" name="Variable">DialogueAlreadyOpenned</param>
+                            <param id="0" name="Variable">dialogueAlreadyOpenned</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="618361429609795" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="0" name="Set text" sid="985908878848821" type="Dialogue">
@@ -1364,7 +1597,7 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="424482132510924" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Value">5</param>
                         </action>
                         <action id="-15" name="Set visible" sid="458969870121547" type="InteractAction">
@@ -1386,11 +1619,11 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="601750663797666" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="535186602742041" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="0" name="Set text" sid="190318916023826" type="Dialogue">
@@ -1412,7 +1645,7 @@
                             <param id="0" name="Visibility">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="493341857319736" type="System">
-                            <param id="0" name="Variable">DialogueAlreadyOpenned</param>
+                            <param id="0" name="Variable">dialogueAlreadyOpenned</param>
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>
@@ -1423,12 +1656,12 @@
                             <param id="0" name="Key">70</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="856247985159904" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">5</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="118213732957445" type="System">
-                            <param id="0" name="Variable">DialogueAlreadyOpenned</param>
+                            <param id="0" name="Variable">dialogueAlreadyOpenned</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
@@ -1444,11 +1677,11 @@
                             <param id="0" name="Text">&quot;&quot;</param>
                         </action>
                         <action id="-9" name="Set value" sid="473852401185164" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-9" name="Set value" sid="528893687927685" type="System">
-                            <param id="0" name="Variable">DialogueAlreadyOpenned</param>
+                            <param id="0" name="Variable">dialogueAlreadyOpenned</param>
                             <param id="1" name="Value">1</param>
                         </action>
                         <action id="-9" name="Set value" sid="504799175519222" type="System">
@@ -1463,12 +1696,12 @@
                 <event-block sid="905232525910849">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="765341203001202" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="784433111783712" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">5</param>
                         </condition>
@@ -1490,7 +1723,7 @@
                             <param id="2" name="Second value">54</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="517096975054988" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">5</param>
                         </condition>
@@ -1512,14 +1745,14 @@
                             <param id="2" name="Second value">54</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="569207936918182" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">5</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="502882722072865" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Value">2</param>
                         </action>
                         <action id="0" name="Set text" sid="930707057446514" type="Dialogue">
@@ -1537,12 +1770,12 @@
                 <event-block sid="550063599124893">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="515573537787678" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="948605876890705" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">5</param>
                         </condition>
@@ -1562,7 +1795,7 @@
                 <event-block sid="962795997878830">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="643236602126500" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
@@ -1572,7 +1805,7 @@
                             <param id="2" name="Second value">27</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="801186593560081" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">5</param>
                         </condition>
@@ -1589,12 +1822,12 @@
                             <param id="0" name="Key">70</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="679667402109983" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
                         <condition id="-14" name="Compare variable" sid="474865030640682" type="System">
-                            <param id="0" name="Variable">IsInteractive</param>
+                            <param id="0" name="Variable">isInteractive</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">5</param>
                         </condition>
@@ -1606,11 +1839,11 @@
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="895114193374077" type="System">
-                            <param id="0" name="Variable">DialogueAlreadyOpenned</param>
+                            <param id="0" name="Variable">dialogueAlreadyOpenned</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="-9" name="Set value" sid="259337883161878" type="System">
-                            <param id="0" name="Variable">DialogueRunning</param>
+                            <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Value">0</param>
                         </action>
                         <action id="0" name="Set text" sid="150835314125948" type="Dialogue">
@@ -1638,7 +1871,7 @@
         <event-block sid="850785140530280">
             <conditions>
                 <condition id="-14" name="Compare variable" sid="844702431239393" type="System">
-                    <param id="0" name="Variable">DialogueRunning</param>
+                    <param id="0" name="Variable">dialogueRunning</param>
                     <param id="1" name="Comparison">5</param>
                     <param id="2" name="Value">1</param>
                 </condition>
@@ -1646,22 +1879,6 @@
             <actions>
                 <action id="-15" name="Set visible" sid="635034810562949" type="InteractAction">
                     <param id="0" name="Visibility">0</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block disabled="1" sid="542761507648485">
-            <conditions>
-                <condition id="-2" name="On start of layout" sid="522693161217103" type="System" />
-            </conditions>
-            <actions>
-                <action id="-16" name="Wait" sid="441330207011074" type="System">
-                    <param id="0" name="Seconds">0.1</param>
-                </action>
-                <action id="0" name="Play" sid="181618451085361" type="Audio">
-                    <param id="0" name="Audio file">Main Menu Theme</param>
-                    <param id="2" name="Loop">1</param>
-                    <param id="3" name="Volume">0</param>
-                    <param id="1" name="Tag (optional)">&quot;Menu OST&quot;</param>
                 </action>
             </actions>
         </event-block>

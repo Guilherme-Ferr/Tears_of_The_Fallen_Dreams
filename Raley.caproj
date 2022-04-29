@@ -12,6 +12,7 @@
     <used-plugins>
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
+        <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
@@ -59,33 +60,6 @@
             <plugin id="TiledBg" />
             <texture original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\Florest_export_1" />
         </object-type>
-        <object-type name="Bricks" sid="828014892644307">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="131771501571280" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\Tijolos (high resolution).png" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Wall" sid="281048767060434">
-            <plugin id="Sprite" />
-            <behaviors>
-                <behavior-type name="Solid" sid="761612077318709">
-                    <behavior id="solid" />
-                </behavior-type>
-            </behaviors>
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="332196897198790" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\Papel de parede (high resolution).png">
-                        <collision-poly>
-                            <point x="0.492064" y="1" />
-                            <point x="1" y="1" />
-                            <point x="0" y="1" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
         <object-type name="Window" sid="684970153642940">
             <plugin id="Sprite" />
             <animation-folder>
@@ -96,21 +70,6 @@
                             <point x="0.979399" y="0.00173611" />
                             <point x="0.979399" y="0.824652" />
                             <point x="0.0243435" y="0.824652" />
-                        </collision-poly>
-                    </frame>
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="Chest" sid="664901397502328">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="274219587443737" speed="5">
-                    <frame duration="1" hotspotX="0.334123" hotspotY="-1.10417" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\Baú de brinquedos (high resolution).png">
-                        <collision-poly>
-                            <point x="0.945497" y="1" />
-                            <point x="0.00948042" y="1" />
-                            <point x="0.00948042" y="0" />
-                            <point x="0.945497" y="0" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -143,12 +102,12 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="149695840328829" speed="5">
-                    <frame duration="1" hotspotX="1.46657" hotspotY="-0.434659" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\Estante (high resolution).png">
+                    <frame duration="1" hotspotX="4.29472" hotspotY="-3.40079" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\Room\Cama_atualizada-export.png">
                         <collision-poly>
-                            <point x="0.00145349" y="0.383523" />
-                            <point x="1" y="0.383523" />
+                            <point x="0.00628664" y="0" />
+                            <point x="1" y="0" />
                             <point x="1" y="1" />
-                            <point x="0.00145349" y="1" />
+                            <point x="0.00628664" y="1" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -780,6 +739,87 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="Background" sid="256394144683502">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="806186329761063" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\FACULDADE DE JOGUINHO\menu images\wallhaven-e77wxo.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="PlayTxt" sid="354133404558082">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Mouse" sid="443532475655426">
+            <plugin id="Mouse" />
+        </object-type>
+        <object-type name="Chest" sid="950326497704055">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="396023628248361" speed="5">
+                    <frame duration="1" hotspotX="0.674731" hotspotY="-1.09884" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\Room\Bau_de_brinquedos-export-1.png">
+                        <collision-poly>
+                            <point x="0.325269" y="0.00581395" />
+                            <point x="0.674731" y="0.00581395" />
+                            <point x="0.943548" y="0.180233" />
+                            <point x="0.674731" y="0.994186" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RapinskPlush" sid="491981375263328">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="232702984698113" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\Room\Rapinsk_pelucia.png">
+                        <collision-poly>
+                            <point x="0.59375" y="0.59375" />
+                            <point x="0.5" y="0.5625" />
+                            <point x="0.65625" y="0.65625" />
+                            <point x="0.5" y="0.9375" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Wall" sid="342006564807761">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="22" loop="1" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="406980297463189" speed="8">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="WallForest" sid="598985290577341">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="695068014090404" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\Room\Quarto_Yorlan_HR.gif" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -814,6 +854,7 @@
                 <roll-off-factor>1</roll-off-factor>
             </properties>
         </global-instance>
+        <global-instance type="Mouse" uid="39" />
     </global-instances>
     <sounds-folder />
     <music-folder>
