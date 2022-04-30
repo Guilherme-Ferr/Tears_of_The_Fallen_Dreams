@@ -1,0 +1,169 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Room After Sleep Event</name>
+    <events>
+        <include>Raley Action</include>
+        <event-block sid="365090110790376">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="684198826503006" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Comparison">5</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="214828552015385" type="InteractAction">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="183657976893317">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="612824533895747" type="System" />
+            </conditions>
+            <actions>
+                <action id="-9" name="Set value" sid="198388525506722" type="System">
+                    <param id="0" name="Variable">isPlayerInteracting</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="-1" name="Set X" sid="895673359562628" type="Raley">
+                    <param id="0" name="X">496</param>
+                </action>
+                <action id="-2" name="Set Y" sid="212416872035664" type="Raley">
+                    <param id="0" name="Y">1134</param>
+                </action>
+                <action id="4" name="Set animation" sid="978749558605928" type="Raley">
+                    <param id="0" name="Animation">&quot;WakeUp&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="2" name="Stop" sid="423857596793846" type="Raley" />
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="485279959547271" type="Fade">
+                    <param id="0" name="Fade-out time">3</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="484984957466150" type="Fade" />
+                <action id="-16" name="Wait" sid="887965147691454" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="3" name="Start" sid="611049971029926" type="Raley">
+                    <param id="0" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="587180165441706" type="System">
+                    <param id="0" name="Seconds">0.80</param>
+                </action>
+                <action id="4" name="Set animation" sid="389976987734212" type="Raley">
+                    <param id="0" name="Animation">&quot;InteractOut&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="486304868396537" type="System">
+                    <param id="0" name="Seconds">0.80</param>
+                </action>
+                <action id="-9" name="Set value" sid="622106065775931" type="System">
+                    <param id="0" name="Variable">isPlayerInteracting</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="711461164595776" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="729850355612617" type="System">
+                    <param id="0" name="Variable">dialogueAlreadyOpenned</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="592070461424753" title="WindowToJump">
+            <sub-events>
+                <event-block sid="968530013934425">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="776979281823231" type="Raley">
+                            <param id="0" name="Object">Interaction</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="169632118283762" type="Interaction">
+                            <param id="0" name="Object">WindowToJump</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="567890561447376" type="System">
+                            <param id="0" name="Variable">dialogueAlreadyOpenned</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="965726728392362" type="System">
+                            <param id="0" name="Variable">isInteractive</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="838591254129389" type="InteractAction">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="547019168730488" type="InteractAction">
+                            <param id="0" name="X">Raley.X</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="342223091729057" type="InteractAction">
+                            <param id="0" name="Y">Raley.Y - 300</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="531058505354811">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="627729164276367" type="Raley">
+                            <param id="0" name="Object">Interaction</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="703259591353113" type="System">
+                            <param id="0" name="Variable">isInteractive</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="465825742572387" type="InteractAction">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="355732624581589">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="590530138782599" type="Keyboard">
+                            <param id="0" name="Key">70</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="772280302305272" type="System">
+                            <param id="0" name="Variable">isInteractive</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="425085381901125" type="System">
+                            <param id="0" name="Variable">dialogueAlreadyOpenned</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="969234091855766" type="System">
+                            <param id="0" name="Variable">dialogueRunning</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="928727581955900" type="Raley">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="336824765868499" type="System">
+                            <param id="0" name="Seconds">0.30</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="317587751993437" type="Raley">
+                            <param id="0" name="Layer">&quot;BackGround&quot;</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="140548830363497" type="Limit" />
+                        <action behavior="Fade" id="2" name="Set fade-in time" sid="982240209611125" type="Fade">
+                            <param id="0" name="Fade-in time">1</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="166174656646012" type="Fade" />
+                        <action id="-16" name="Wait" sid="276359836041733" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action id="-9" name="Destroy" sid="110800912641741" type="Raley" />
+                        <action id="-2" name="Go to layout" sid="112033251292400" type="System">
+                            <param id="0" name="Layout">Dark Forest</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

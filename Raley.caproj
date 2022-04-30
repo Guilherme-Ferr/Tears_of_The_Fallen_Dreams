@@ -131,12 +131,12 @@
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="215700133245266" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Characters\RaleyForest\idle">
+                    <frame duration="1" hotspotX="0.532895" hotspotY="0.483974" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Characters\RaleyForest\idle">
                         <collision-poly>
-                            <point x="0.375" y="0.03125" />
-                            <point x="0.71875" y="0.03125" />
-                            <point x="0.71875" y="1" />
-                            <point x="0.375" y="1" />
+                            <point x="0.269737" y="0.00320513" />
+                            <point x="0.993421" y="0.00320513" />
+                            <point x="0.993421" y="0.996795" />
+                            <point x="0.269737" y="0.996795" />
                         </collision-poly>
                     </frame>
                 </animation>
@@ -398,7 +398,7 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="9" loop="0" name="InteractOut" pingpong="0" repeatcount="1" repeatto="0" sid="416722357196711" speed="9">
+                <animation framecount="9" loop="0" name="InteractOut" pingpong="0" repeatcount="1" repeatto="0" sid="416722357196711" speed="10">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
                             <point x="0.375" y="0.03125" />
@@ -472,7 +472,7 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="7" loop="0" name="Sleep" pingpong="0" repeatcount="1" repeatto="0" sid="802385504233726" speed="9">
+                <animation framecount="7" loop="0" name="Sleep" pingpong="0" repeatcount="1" repeatto="0" sid="802385504233726" speed="8">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
@@ -489,14 +489,6 @@
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
-                </animation>
-            </animation-folder>
-        </object-type>
-        <object-type name="OutsideWindowForest" sid="283872063952657">
-            <plugin id="Sprite" />
-            <animation-folder>
-                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="501158629206282" speed="5">
-                    <frame duration="1" hotspotX="-0.056338" hotspotY="0.0887656" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\backGroundDarkForest" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -753,7 +745,7 @@
         <object-type name="Mouse" sid="443532475655426">
             <plugin id="Mouse" />
         </object-type>
-        <object-type name="Chest" sid="950326497704055">
+        <object-type name="ChestOpen" sid="950326497704055">
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="396023628248361" speed="5">
@@ -816,7 +808,52 @@
             <plugin id="Sprite" />
             <animation-folder>
                 <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="695068014090404" speed="5">
-                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\Room\Quarto_Yorlan_HR.gif" />
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\Room\Quarto Forest HR.png">
+                        <collision-poly>
+                            <point x="0" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.107692" />
+                            <point x="0" y="0.103297" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="ChestClose" sid="795967944317594">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="996934210727724" speed="5">
+                    <frame duration="1" hotspotX="0.665563" hotspotY="-1.95902" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\Room\Bau_fechado-export.png">
+                        <collision-poly>
+                            <point x="0.400662" y="0.00819672" />
+                            <point x="0.930464" y="0.00819672" />
+                            <point x="0.665563" y="0.991803" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="WindowToJump" sid="435013697344082">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="765794671069736" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="WallForestWithNoWindow" sid="522917011138188">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="905234051998894" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\Room\Quarto Forest HR.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BlackOut" sid="726647278095694">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="690274300012727" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
                 </animation>
             </animation-folder>
         </object-type>
@@ -824,6 +861,7 @@
     <families />
     <layout-folder>
         <layout>Room.xml</layout>
+        <layout>Room After Sleep.xml</layout>
         <layout>Menu.xml</layout>
         <layout>Dark Forest.xml</layout>
     </layout-folder>
@@ -837,6 +875,7 @@
         <event-sheet>Dark Forest Event .xml</event-sheet>
         <event-sheet>Room Event.xml</event-sheet>
         <event-sheet>Menu Event.xml</event-sheet>
+        <event-sheet>Room After Sleep Event.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="4" />

@@ -18,6 +18,16 @@
                 <event-block sid="865024452663490">
                     <conditions>
                         <condition behavior="Platform" id="0" inverted="1" name="Is moving" sid="512714017059739" type="Raley" />
+                        <condition id="-14" name="Compare variable" sid="487549641687854" type="System">
+                            <param id="0" name="Variable">dialogueRunning</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="511728623923366" type="System">
+                            <param id="0" name="Variable">isPlayerInteracting</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="257187051139149" type="Raley">
@@ -33,6 +43,11 @@
                         </condition>
                         <condition behavior="Platform" id="3" inverted="1" name="Is jumping" sid="259883377820694" type="Raley" />
                         <condition behavior="Platform" id="4" inverted="1" name="Is falling" sid="632152247136743" type="Raley" />
+                        <condition id="-14" name="Compare variable" sid="797735513857052" type="System">
+                            <param id="0" name="Variable">isPlayerInteracting</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="7" name="Set mirrored" sid="458411112106797" type="Raley">
@@ -52,6 +67,11 @@
                         <condition id="2" name="Key is down" sid="147067756278413" type="Keyboard">
                             <param id="0" name="Key">68</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="517531237214059" type="System">
+                            <param id="0" name="Variable">isPlayerInteracting</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="7" name="Set mirrored" sid="206666215132200" type="Raley">
@@ -69,6 +89,11 @@
                         </condition>
                         <condition behavior="Platform" id="3" inverted="1" name="Is jumping" sid="696928618784122" type="Raley" />
                         <condition behavior="Platform" id="4" inverted="1" name="Is falling" sid="493736742158191" type="Raley" />
+                        <condition id="-14" name="Compare variable" sid="778853237626285" type="System">
+                            <param id="0" name="Variable">isPlayerInteracting</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="7" name="Set mirrored" sid="901199922079561" type="Raley">
@@ -88,6 +113,11 @@
                         <condition id="2" name="Key is down" sid="140267807709341" type="Keyboard">
                             <param id="0" name="Key">65</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="871990594807571" type="System">
+                            <param id="0" name="Variable">isPlayerInteracting</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="7" name="Set mirrored" sid="460064449202230" type="Raley">
@@ -102,6 +132,11 @@
                     <conditions>
                         <condition id="0" name="On key pressed" sid="118719267875779" type="Keyboard">
                             <param id="0" name="Key">32</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="563112733898940" type="System">
+                            <param id="0" name="Variable">isPlayerInteracting</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
                         </condition>
                     </conditions>
                     <actions>

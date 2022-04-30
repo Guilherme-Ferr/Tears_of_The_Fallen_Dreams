@@ -10,8 +10,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="0">Room</layout>
-        <event-sheet active="1" order="1">Room Event</event-sheet>
+        <layout order="0">Room After Sleep</layout>
+        <layout order="2">Dark Forest</layout>
+        <event-sheet order="1">Room After Sleep Event</event-sheet>
+        <event-sheet active="1" order="3">Dark Forest Event </event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -24,8 +26,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="object-folder/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
-        <folder expanded="0" path="event-folder/Generic/" />
-        <folder expanded="0" path="event-folder/Generic/Movement/" />
+        <folder expanded="1" path="event-folder/Generic/" />
+        <folder expanded="1" path="event-folder/Generic/Movement/" />
         <folder expanded="0" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="1" path="music-folder/" />
@@ -35,7 +37,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Closet/" />
         <folder expanded="1" path="animation-folder/Bed/" />
         <folder expanded="1" path="animation-folder/Raley/" />
-        <folder expanded="1" path="animation-folder/OutsideWindowForest/" />
         <folder expanded="1" path="animation-folder/Limit/" />
         <folder expanded="1" path="animation-folder/DialogueBox/" />
         <folder expanded="1" path="animation-folder/InteractAction/" />
@@ -50,9 +51,13 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Fade/" />
         <folder expanded="1" path="animation-folder/RaleyIconDialog/" />
         <folder expanded="1" path="animation-folder/Background/" />
-        <folder expanded="1" path="animation-folder/Chest/" />
+        <folder expanded="1" path="animation-folder/ChestOpen/" />
         <folder expanded="1" path="animation-folder/RapinskPlush/" />
         <folder expanded="1" path="animation-folder/Wall/" />
         <folder expanded="1" path="animation-folder/WallForest/" />
+        <folder expanded="1" path="animation-folder/ChestClose/" />
+        <folder expanded="1" path="animation-folder/WindowToJump/" />
+        <folder expanded="1" path="animation-folder/WallForestWithNoWindow/" />
+        <folder expanded="1" path="animation-folder/BlackOut/" />
     </folders-expanded>
 </c2uistate>
