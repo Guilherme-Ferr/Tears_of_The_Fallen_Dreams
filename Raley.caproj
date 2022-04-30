@@ -739,8 +739,16 @@
                 </animation>
             </animation-folder>
         </object-type>
-        <object-type name="PlayTxt" sid="354133404558082">
+        <object-type name="MainMenuOptions" sid="354133404558082">
             <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="ID" sid="404445674091850" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Fade" sid="488325646493861">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
         </object-type>
         <object-type name="Mouse" sid="443532475655426">
             <plugin id="Mouse" />
@@ -857,6 +865,14 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="PressStart" sid="211775977199663">
+            <plugin id="Text" />
+            <behaviors>
+                <behavior-type name="Fade" sid="976811202257468">
+                    <behavior id="Fade" />
+                </behavior-type>
+            </behaviors>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -866,11 +882,9 @@
         <layout>Dark Forest.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-folder name="Generic">
-            <event-folder name="Movement">
-                <event-sheet>Raley Indoors.xml</event-sheet>
-                <event-sheet>Raley Action.xml</event-sheet>
-            </event-folder>
+        <event-folder name="Movement">
+            <event-sheet>Raley Indoors.xml</event-sheet>
+            <event-sheet>Raley Action.xml</event-sheet>
         </event-folder>
         <event-sheet>Dark Forest Event .xml</event-sheet>
         <event-sheet>Room Event.xml</event-sheet>
