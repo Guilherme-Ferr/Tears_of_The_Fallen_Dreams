@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Options Menu Event</name>
+    <events>
+        <event-block any="1" sid="798384562558154">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="985448827901901" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="493904760282007" type="Fade">
+                    <param id="0" name="Fade-out time">0.2</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="427922822653610" type="Fade" />
+            </actions>
+        </event-block>
+        <event-block sid="709089845787539">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="101953045407800" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">MainMenuOptions</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="211762160821577" type="MainMenuOptions">
+                    <param id="0" name="Instance variable">ID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="217418434252067" type="Fade">
+                    <param id="0" name="Fade-out time">0</param>
+                </action>
+                <action behavior="Fade" id="2" name="Set fade-in time" sid="370474811622975" type="Fade">
+                    <param id="0" name="Fade-in time">0.2</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="410654632280461" type="Fade" />
+                <action id="-16" name="Wait" sid="346970918193497" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="345155851360013" type="System">
+                    <param id="0" name="Layout">Credits Menu</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="614141292789597">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="296457494854066" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">MainMenuOptions</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="274408234548135" type="MainMenuOptions">
+                    <param id="0" name="Instance variable">ID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="881873419548672" type="Fade">
+                    <param id="0" name="Fade-out time">0</param>
+                </action>
+                <action behavior="Fade" id="2" name="Set fade-in time" sid="531039079337883" type="Fade">
+                    <param id="0" name="Fade-in time">0.2</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="187740755276531" type="Fade" />
+                <action id="-16" name="Wait" sid="563324060681664" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="304385185207333" type="System">
+                    <param id="0" name="Layout">Main Menu</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Main Menu Event</name>
+    <events>
+        <variable constant="0" name="optionsAreClickable" sid="380328122794944" static="0" type="number">0</variable>
+        <event-block any="1" sid="962201984108585">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="461092833572739" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="233410216320137" type="Fade">
+                    <param id="0" name="Fade-out time">1.5</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="932478881657800" type="Fade" />
+                <action id="-16" name="Wait" sid="831599233932249" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-9" name="Set value" sid="649920386871573" type="System">
+                    <param id="0" name="Variable">optionsAreClickable</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action disabled="1" id="0" name="Play" sid="886243521157866" type="Audio">
+                    <param id="0" name="Audio file">Main Menu Theme</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">0</param>
+                    <param id="1" name="Tag (optional)">&quot;Menu OST&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="965344480587292">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="591829809268581" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">PressStart</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="782874989689680" type="System">
+                    <param id="0" name="Variable">optionsAreClickable</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="235813487848186" type="PressStart">
+                    <param id="0" name="Fade-out time">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="332449340786000" type="PressStart" />
+                <action id="-16" name="Wait" sid="347044859642274" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="-15" name="Set visible" sid="919727370700768" type="MainMenuOptions">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="2" name="Set fade-in time" sid="385369474945257" type="MainMenuOptions">
+                    <param id="0" name="Fade-in time">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="814479991743450" type="MainMenuOptions" />
+                <action id="-9" name="Set value" sid="906567417056106" type="System">
+                    <param id="0" name="Variable">optionsAreClickable</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="476914180788404">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="826815256149214" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">MainMenuOptions</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="104728254299804" type="System">
+                    <param id="0" name="Variable">optionsAreClickable</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="369626950876310" type="MainMenuOptions">
+                    <param id="0" name="Instance variable">ID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="198037309874538" type="Fade">
+                    <param id="0" name="Fade-out time">0</param>
+                </action>
+                <action behavior="Fade" id="2" name="Set fade-in time" sid="222147755030583" type="Fade">
+                    <param id="0" name="Fade-in time">2</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="387605992850969" type="Fade" />
+                <action id="-16" name="Wait" sid="262663105096840" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="324241240334092" type="System">
+                    <param id="0" name="Layout">Room</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="545087639512969">
+            <conditions>
+                <condition id="6" name="On object clicked" sid="308317911859465" type="Mouse">
+                    <param id="0" name="Mouse button">0</param>
+                    <param id="1" name="Click type">0</param>
+                    <param id="2" name="Object clicked">MainMenuOptions</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="465114251871668" type="System">
+                    <param id="0" name="Variable">optionsAreClickable</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="-7" name="Compare instance variable" sid="758608052327341" type="MainMenuOptions">
+                    <param id="0" name="Instance variable">ID</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="104719125383108" type="Fade">
+                    <param id="0" name="Fade-out time">0</param>
+                </action>
+                <action behavior="Fade" id="2" name="Set fade-in time" sid="592937706055674" type="Fade">
+                    <param id="0" name="Fade-in time">0.2</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="294525547703834" type="Fade" />
+                <action id="-16" name="Wait" sid="290367029756551" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="857269354765227" type="System">
+                    <param id="0" name="Layout">Options Menu</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

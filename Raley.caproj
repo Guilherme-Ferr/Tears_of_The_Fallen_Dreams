@@ -878,7 +878,9 @@
     <layout-folder>
         <layout>Room.xml</layout>
         <layout>Room After Sleep.xml</layout>
-        <layout>Menu.xml</layout>
+        <layout>Main Menu.xml</layout>
+        <layout>Options Menu.xml</layout>
+        <layout>Credits Menu.xml</layout>
         <layout>Dark Forest.xml</layout>
     </layout-folder>
     <event-folder>
@@ -888,8 +890,10 @@
         </event-folder>
         <event-sheet>Dark Forest Event .xml</event-sheet>
         <event-sheet>Room Event.xml</event-sheet>
-        <event-sheet>Menu Event.xml</event-sheet>
+        <event-sheet>Options Menu Event.xml</event-sheet>
         <event-sheet>Room After Sleep Event.xml</event-sheet>
+        <event-sheet>Credits Menu Event.xml</event-sheet>
+        <event-sheet>Main Menu Event.xml</event-sheet>
     </event-folder>
     <global-instances>
         <global-instance type="Keyboard" uid="4" />
