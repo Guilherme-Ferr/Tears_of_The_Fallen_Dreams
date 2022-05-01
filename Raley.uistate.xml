@@ -10,12 +10,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="3">Main Menu</layout>
-        <layout order="4">Options Menu</layout>
-        <layout active="1" order="5">Credits Menu</layout>
-        <event-sheet order="1">Options Menu Event</event-sheet>
-        <event-sheet order="0">Main Menu Event</event-sheet>
-        <event-sheet order="2">Credits Menu Event</event-sheet>
+        <event-sheet order="0">Room Event</event-sheet>
+        <event-sheet active="1" order="1">Raley Indoors</event-sheet>
+        <event-sheet order="2">Raley Action</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -28,7 +25,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="object-folder/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
-        <folder expanded="0" path="event-folder/Movement/" />
+        <folder expanded="1" path="event-folder/Movement/" />
         <folder expanded="0" path="file-folder/" />
         <folder expanded="1" path="sound-folder/" />
         <folder expanded="0" path="music-folder/" />

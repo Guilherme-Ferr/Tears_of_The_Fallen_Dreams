@@ -9,6 +9,10 @@
                 <condition id="-2" name="On start of layout" sid="305272848327404" type="System" />
             </conditions>
             <actions>
+                <action id="3" name="Set volume" sid="371019504593100" type="Audio">
+                    <param id="0" name="Tag">&quot;ForestWind&quot;</param>
+                    <param id="1" name="dB">-0</param>
+                </action>
                 <action behavior="Fade" id="4" name="Set fade-out time" sid="469309667853203" type="Fade">
                     <param id="0" name="Fade-out time">0.3</param>
                 </action>
