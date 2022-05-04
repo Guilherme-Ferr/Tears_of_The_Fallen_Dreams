@@ -20,11 +20,11 @@
                     <param id="0" name="Variable">optionsAreClickable</param>
                     <param id="1" name="Value">1</param>
                 </action>
-                <action disabled="1" id="0" name="Play" sid="886243521157866" type="Audio">
+                <action id="0" name="Play" sid="886243521157866" type="Audio">
                     <param id="0" name="Audio file">Main Menu Theme</param>
                     <param id="2" name="Loop">1</param>
-                    <param id="3" name="Volume">0</param>
-                    <param id="1" name="Tag (optional)">&quot;Menu OST&quot;</param>
+                    <param id="3" name="Volume">MusicsMasterVolume</param>
+                    <param id="1" name="Tag (optional)">&quot;MenuSong&quot;</param>
                 </action>
             </actions>
         </event-block>

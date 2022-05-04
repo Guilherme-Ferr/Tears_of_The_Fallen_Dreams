@@ -13,6 +13,9 @@
                 <condition id="-2" name="On start of layout" sid="108322077391762" type="System" />
             </conditions>
             <actions>
+                <action id="6" name="Stop" sid="320728595242622" type="Audio">
+                    <param id="0" name="Tag">&quot;MenuSong&quot;</param>
+                </action>
                 <action behavior="Fade" id="4" name="Set fade-out time" sid="974621603908555" type="Fade">
                     <param id="0" name="Fade-out time">2</param>
                 </action>
@@ -20,7 +23,7 @@
                 <action id="0" name="Play" sid="180575474105469" type="Audio">
                     <param id="0" name="Audio file">WindYorlan</param>
                     <param id="2" name="Loop">1</param>
-                    <param id="3" name="Volume">10</param>
+                    <param id="3" name="Volume">AmbienteVolume</param>
                     <param id="1" name="Tag (optional)">&quot;RoomWind&quot;</param>
                 </action>
                 <action id="-16" name="Wait" sid="306143598248284" type="System">

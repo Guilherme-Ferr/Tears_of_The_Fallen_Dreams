@@ -140,7 +140,7 @@
                         </collision-poly>
                     </frame>
                 </animation>
-                <animation framecount="6" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="766497657138612" speed="30">
+                <animation framecount="6" loop="1" name="Walk" pingpong="0" repeatcount="1" repeatto="0" sid="766497657138612" speed="7">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
                         <collision-poly>
                             <point x="0.375" y="0.03125" />
@@ -605,6 +605,9 @@
         </object-type>
         <object-type name="Title" sid="272827830154651">
             <plugin id="Text" />
+            <instance-variables>
+                <instance-variable name="ID" sid="276499135635592" type="number" />
+            </instance-variables>
         </object-type>
         <object-type name="Forest2" sid="596282436525650">
             <plugin id="TiledBg" />
