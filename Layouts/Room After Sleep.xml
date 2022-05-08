@@ -325,6 +325,10 @@
                         <initial-frame>0</initial-frame>
                         <collisions>Enabled</collisions>
                     </properties>
+                    <instance-variables>
+                        <HP>0</HP>
+                        <Tech>0</Tech>
+                    </instance-variables>
                     <behavior-instances>
                         <behavior-instance type="Jumpthru">
                             <properties>
@@ -355,6 +359,7 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
+                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -445,7 +450,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1152</x>
-                        <y>768</y>
+                        <y>896</y>
                         <z>0</z>
                         <width>2336</width>
                         <height>1760</height>
@@ -467,7 +472,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1152</x>
-                        <y>672</y>
+                        <y>768</y>
                         <z>0</z>
                         <width>2688</width>
                         <height>1536</height>
@@ -500,7 +505,7 @@
                     <effect-fallback>0</effect-fallback>
                     <world>
                         <x>1120</x>
-                        <y>736</y>
+                        <y>832</y>
                         <z>0</z>
                         <width>2320</width>
                         <height>1740</height>

@@ -10,10 +10,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout order="2">Room After Sleep</layout>
-        <layout active="1" order="3">Dark Forest</layout>
-        <event-sheet order="0">Room After Sleep Event</event-sheet>
-        <event-sheet order="1">Dark Forest Event </event-sheet>
+        <layout order="0">Dark Forest</layout>
+        <event-sheet active="1" order="1">Raley Action</event-sheet>
+        <event-sheet order="2">Dark Forest Event </event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -26,9 +25,9 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="0" path="object-folder/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
-        <folder expanded="0" path="event-folder/Movement/" />
+        <folder expanded="1" path="event-folder/General/" />
         <folder expanded="0" path="file-folder/" />
-        <folder expanded="0" path="sound-folder/" />
+        <folder expanded="1" path="sound-folder/" />
         <folder expanded="0" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/Window/" />
@@ -58,5 +57,11 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/WindowToJump/" />
         <folder expanded="1" path="animation-folder/WallForestWithNoWindow/" />
         <folder expanded="1" path="animation-folder/BlackOut/" />
+        <folder expanded="1" path="animation-folder/EnemyDamageHitbox/" />
+        <folder expanded="1" path="animation-folder/HPBar/" />
+        <folder expanded="1" path="animation-folder/TechBar/" />
+        <folder expanded="1" path="animation-folder/RaleyHouse/" />
+        <folder expanded="1" path="animation-folder/RaleyDamageHitbox/" />
+        <folder expanded="1" path="animation-folder/WeaponEquiped/" />
     </folders-expanded>
 </c2uistate>

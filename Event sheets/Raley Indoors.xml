@@ -3,6 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Raley Indoors</name>
     <events>
+        <variable constant="0" name="vapo" sid="483955109479106" static="0" type="number">0</variable>
         <event-group description="General moviments of the main character" sid="136027041383608" title="MovementWalk">
             <sub-events>
                 <event-block sid="525147206750301">
@@ -159,5 +160,71 @@
                 </event-block>
             </sub-events>
         </event-group>
+        <event-block disabled="1" sid="253998288972406">
+            <conditions>
+                <condition id="2" name="Is playing" sid="191076514338735" type="Raley">
+                    <param id="0" name="Animation">&quot;Walk&quot;</param>
+                </condition>
+            </conditions>
+            <actions />
+            <sub-events>
+                <event-block any="1" disabled="1" sid="805465130089267">
+                    <conditions>
+                        <condition id="3" name="Compare frame" sid="183960278314320" type="Raley">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">1</param>
+                        </condition>
+                        <condition id="3" name="Compare frame" sid="573788228782112" type="Raley">
+                            <param id="0" name="Comparison">0</param>
+                            <param id="1" name="Number">4</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block disabled="1" sid="838247733578023">
+                            <conditions>
+                                <condition id="12" name="Compare speed" sid="908825711327085" type="Raley">
+                                    <param id="0" name="Comparison">0</param>
+                                    <param id="1" name="Number">7</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="0" name="Play" sid="382720919073323" type="Audio">
+                                    <param id="0" name="Audio file">RoomStep3</param>
+                                    <param id="2" name="Loop">0</param>
+                                    <param id="3" name="Volume">10</param>
+                                    <param id="1" name="Tag (optional)">&quot;Step&quot;</param>
+                                </action>
+                                <action id="-9" name="Set value" sid="796597269020276" type="System">
+                                    <param id="0" name="Variable">vapo</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block disabled="1" sid="506156409059172">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="531804816235444" type="System">
+                    <param id="0" name="Variable">vapo</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-16" name="Wait" sid="296669762949118" type="System">
+                    <param id="0" name="Seconds">0.2</param>
+                </action>
+                <action id="6" name="Stop" sid="153814011283354" type="Audio">
+                    <param id="0" name="Tag">&quot;Step&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="679474122361290" type="System">
+                    <param id="0" name="Variable">vapo</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>

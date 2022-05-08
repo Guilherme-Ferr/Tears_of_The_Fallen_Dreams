@@ -13,6 +13,7 @@
         <plugin author="Scirra" id="Audio" version="1">Audio</plugin>
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Mouse" version="1">Mouse</plugin>
+        <plugin author="Scirra" id="Particles" version="1">Particles</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="Spritefont2" version="1">Sprite font</plugin>
         <plugin author="Scirra" id="Text" version="1">Text</plugin>
@@ -21,6 +22,8 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -115,6 +118,10 @@
         </object-type>
         <object-type global="1" name="Raley" sid="432007578089262">
             <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="HP" sid="296824199351917" type="number" />
+                <instance-variable name="Tech" sid="925653959590279" type="number" />
+            </instance-variables>
             <behaviors>
                 <behavior-type name="Jumpthru" sid="708560723445478">
                     <behavior id="jumpthru" />
@@ -128,10 +135,14 @@
                 <behavior-type name="Solid" sid="538975175257830">
                     <behavior id="solid" />
                 </behavior-type>
+                <behavior-type name="Flash" sid="189647083771442">
+                    <behavior id="Flash" />
+                </behavior-type>
             </behaviors>
             <animation-folder>
                 <animation framecount="1" loop="0" name="Idle" pingpong="0" repeatcount="1" repeatto="0" sid="215700133245266" speed="5">
                     <frame duration="1" hotspotX="0.532895" hotspotY="0.483974" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Characters\RaleyForest\idle">
+                        <image-point name="Hit" x="1.41447" y="0.464744" />
                         <collision-poly>
                             <point x="0.269737" y="0.00320513" />
                             <point x="0.993421" y="0.00320513" />
@@ -192,6 +203,7 @@
                 </animation>
                 <animation framecount="6" loop="1" name="Run" pingpong="0" repeatcount="1" repeatto="0" sid="369864167275914" speed="9">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Hit" x="0.671875" y="0.453125" />
                         <collision-poly>
                             <point x="0.375" y="0.03125" />
                             <point x="0.71875" y="0.03125" />
@@ -200,6 +212,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Hit" x="0.671875" y="0.453125" />
                         <collision-poly>
                             <point x="0.375" y="0.03125" />
                             <point x="0.71875" y="0.03125" />
@@ -208,6 +221,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Hit" x="0.671875" y="0.453125" />
                         <collision-poly>
                             <point x="0.375" y="0.03125" />
                             <point x="0.71875" y="0.03125" />
@@ -216,6 +230,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Hit" x="0.671875" y="0.453125" />
                         <collision-poly>
                             <point x="0.375" y="0.03125" />
                             <point x="0.71875" y="0.03125" />
@@ -224,6 +239,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Hit" x="0.671875" y="0.453125" />
                         <collision-poly>
                             <point x="0.375" y="0.03125" />
                             <point x="0.71875" y="0.03125" />
@@ -232,6 +248,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Hit" x="0.671875" y="0.453125" />
                         <collision-poly>
                             <point x="0.375" y="0.03125" />
                             <point x="0.71875" y="0.03125" />
@@ -242,6 +259,7 @@
                 </animation>
                 <animation framecount="5" loop="0" name="Jump" pingpong="0" repeatcount="1" repeatto="0" sid="848100762669418" speed="8">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Hit" x="0.671875" y="0.426471" />
                         <collision-poly>
                             <point x="0.375" y="0.0294118" />
                             <point x="0.71875" y="0.0294118" />
@@ -250,6 +268,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Hit" x="0.671875" y="0.426471" />
                         <collision-poly>
                             <point x="0.375" y="0.0294118" />
                             <point x="0.71875" y="0.0294118" />
@@ -258,6 +277,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Hit" x="0.671875" y="0.426471" />
                         <collision-poly>
                             <point x="0.375" y="0.0294118" />
                             <point x="0.71875" y="0.0294118" />
@@ -266,6 +286,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Hit" x="0.671875" y="0.426471" />
                         <collision-poly>
                             <point x="0.375" y="0.0294118" />
                             <point x="0.71875" y="0.0294118" />
@@ -274,6 +295,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Hit" x="0.671875" y="0.426471" />
                         <collision-poly>
                             <point x="0.375" y="0.0294118" />
                             <point x="0.71875" y="0.0294118" />
@@ -284,6 +306,7 @@
                 </animation>
                 <animation framecount="6" loop="1" name="Fall" pingpong="0" repeatcount="1" repeatto="0" sid="293949711702448" speed="8">
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Hit" x="0.671875" y="0.426471" />
                         <collision-poly>
                             <point x="0.375" y="0.0294118" />
                             <point x="0.71875" y="0.0294118" />
@@ -292,6 +315,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Hit" x="0.671875" y="0.426471" />
                         <collision-poly>
                             <point x="0.375" y="0.0294118" />
                             <point x="0.71875" y="0.0294118" />
@@ -300,6 +324,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Hit" x="0.671875" y="0.426471" />
                         <collision-poly>
                             <point x="0.375" y="0.0294118" />
                             <point x="0.71875" y="0.0294118" />
@@ -308,6 +333,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Hit" x="0.671875" y="0.426471" />
                         <collision-poly>
                             <point x="0.375" y="0.0294118" />
                             <point x="0.71875" y="0.0294118" />
@@ -316,6 +342,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Hit" x="0.671875" y="0.426471" />
                         <collision-poly>
                             <point x="0.375" y="0.0294118" />
                             <point x="0.71875" y="0.0294118" />
@@ -324,6 +351,7 @@
                         </collision-poly>
                     </frame>
                     <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                        <image-point name="Hit" x="0.671875" y="0.426471" />
                         <collision-poly>
                             <point x="0.375" y="0.0294118" />
                             <point x="0.71875" y="0.0294118" />
@@ -876,6 +904,83 @@
                 </behavior-type>
             </behaviors>
         </object-type>
+        <object-type name="EnemyDamageHitbox" sid="827588099914823">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="345343844127963" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="HPBar" sid="740451122097625">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="731714280056920" speed="5">
+                    <frame duration="1" hotspotX="0.00653595" hotspotY="0.492647" original-source="C:\Users\andre\Downloads\hpBar.jpg" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TechBar" sid="866442909945672">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="541697847981992" speed="5">
+                    <frame duration="1" hotspotX="-0.012" hotspotY="0.474545" original-source="C:\Users\andre\Downloads\TechBar.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="BloodSplash" sid="916843065222772">
+            <plugin id="Particles" />
+            <texture />
+        </object-type>
+        <object-type name="RaleyHouse" sid="530625354636376">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="995946124410092" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="E:\FACULDADE DE JOGUINHO\Smaug\Assets\Ambient\Forest\Casa Raley HR.png">
+                        <collision-poly>
+                            <point x="0.183575" y="0.218391" />
+                            <point x="0.5" y="0.16092" />
+                            <point x="0.816425" y="0.218391" />
+                            <point x="0.966184" y="0.5" />
+                            <point x="0.966184" y="0.95977" />
+                            <point x="0.5" y="0.678161" />
+                            <point x="0" y="1" />
+                            <point x="0" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="RaleyDamageHitbox" sid="415613841197783">
+            <plugin id="Sprite" />
+            <instance-variables>
+                <instance-variable name="doDamage" sid="870307752149488" type="number" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Pin" sid="121209462050708">
+                    <behavior id="Pin" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="275033572089955" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="WeaponEquiped" sid="202466034553662">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Weapon0" pingpong="0" repeatcount="1" repeatto="0" sid="474696981851000" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="Weapon1" pingpong="0" repeatcount="1" repeatto="0" sid="699019543666944" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+                <animation framecount="1" loop="0" name="Weapon2" pingpong="0" repeatcount="1" repeatto="0" sid="331593143819018" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -887,7 +992,7 @@
         <layout>Dark Forest.xml</layout>
     </layout-folder>
     <event-folder>
-        <event-folder name="Movement">
+        <event-folder name="General">
             <event-sheet>Raley Indoors.xml</event-sheet>
             <event-sheet>Raley Action.xml</event-sheet>
         </event-folder>
@@ -922,6 +1027,7 @@
         <file name="RoomStep2.ogg" />
         <file name="RoomStep3.ogg" />
         <file name="ForestWind.ogg" />
+        <file name="BloodSplash.ogg" />
     </sounds-folder>
     <music-folder>
         <file name="Main Menu Theme.ogg" />

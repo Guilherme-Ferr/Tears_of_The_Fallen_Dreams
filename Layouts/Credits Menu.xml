@@ -113,7 +113,7 @@
                 </instance>
                 <instance type="Title" uid="80">
                     <properties>
-                        <text>Credits</text>
+                        <text>Creditos</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial Rounded MT Bold,-96,400,0</font>
                         <color>255,255,255</color>
@@ -143,7 +143,7 @@
                 </instance>
                 <instance type="Title" uid="83">
                     <properties>
-                        <text>Credits</text>
+                        <text>Roteiro</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial Rounded MT Bold,-96,400,0</font>
                         <color>255,255,255</color>
@@ -162,8 +162,8 @@
                         <x>96</x>
                         <y>352</y>
                         <z>0</z>
-                        <width>1024</width>
-                        <height>352</height>
+                        <width>352</width>
+                        <height>160</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -173,7 +173,7 @@
                 </instance>
                 <instance type="Title" uid="84">
                     <properties>
-                        <text>Credits</text>
+                        <text>Programação</text>
                         <initial-visibility>Visible</initial-visibility>
                         <font>Arial Rounded MT Bold,-96,400,0</font>
                         <color>255,255,255</color>
@@ -189,11 +189,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>96</x>
-                        <y>544</y>
+                        <x>480</x>
+                        <y>352</y>
                         <z>0</z>
-                        <width>1024</width>
-                        <height>352</height>
+                        <width>672</width>
+                        <height>160</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -219,11 +219,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>96</x>
+                        <x>704</x>
                         <y>736</y>
                         <z>0</z>
-                        <width>1024</width>
-                        <height>352</height>
+                        <width>416</width>
+                        <height>128</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
