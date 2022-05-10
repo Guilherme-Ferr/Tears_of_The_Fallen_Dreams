@@ -11,8 +11,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </configurations>
     <open-tabs>
         <layout order="0">Dark Forest</layout>
-        <event-sheet active="1" order="1">Raley Action</event-sheet>
-        <event-sheet order="2">Dark Forest Event </event-sheet>
+        <layout order="2">Room After Sleep</layout>
+        <event-sheet order="1">Room Event</event-sheet>
+        <event-sheet order="3">Room After Sleep Event</event-sheet>
+        <event-sheet active="1" order="4">Raley Action</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -27,7 +29,7 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="event-folder/" />
         <folder expanded="1" path="event-folder/General/" />
         <folder expanded="0" path="file-folder/" />
-        <folder expanded="1" path="sound-folder/" />
+        <folder expanded="0" path="sound-folder/" />
         <folder expanded="0" path="music-folder/" />
         <folder expanded="0" path="file-folder/Icons/" />
         <folder expanded="1" path="animation-folder/Window/" />

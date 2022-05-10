@@ -23,9 +23,6 @@
                 <condition id="-2" name="On start of layout" sid="612824533895747" type="System" />
             </conditions>
             <actions>
-                <action id="-15" name="Set visible" sid="406736920096885" type="Raley">
-                    <param id="0" name="Visibility">1</param>
-                </action>
                 <action id="3" name="Set volume" sid="872382930225275" type="Audio">
                     <param id="0" name="Tag">&quot;RoomWind&quot;</param>
                     <param id="1" name="dB">-10</param>

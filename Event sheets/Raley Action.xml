@@ -3,7 +3,7 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Raley Action</name>
     <events>
-        <variable constant="0" name="WeaponEquiped" sid="650782678661998" static="0" type="number">0</variable>
+        <variable constant="0" name="TechSelected" sid="650782678661998" static="0" type="number">0</variable>
         <event-group description="General moviments of the main character" sid="657035325937873" title="MovementAction">
             <sub-events>
                 <event-block sid="696161987487861">
@@ -13,9 +13,6 @@
                     <actions>
                         <action behavior="Platform" id="1" name="Set max speed" sid="243937656118647" type="Raley">
                             <param id="0" name="Max Speed">800</param>
-                        </action>
-                        <action behavior="Platform" id="13" name="Set double-jump" sid="418677332515552" type="Raley">
-                            <param id="0" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -186,10 +183,9 @@
             <sub-events>
                 <event-block sid="471893611238016">
                     <conditions>
-                        <condition id="1" name="Is overlapping another object" sid="855152140869896" type="Raley">
+                        <condition id="0" name="On collision with another object" sid="855152140869896" type="Raley">
                             <param id="0" name="Object">EnemyDamageHitbox</param>
                         </condition>
-                        <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="958535708424486" type="Raley" />
                     </conditions>
                     <actions>
                         <action id="0" name="Play" sid="260269659106183" type="Audio">
@@ -201,11 +197,6 @@
                         <action id="-12" name="Subtract from" sid="330718404057688" type="Raley">
                             <param id="0" name="Instance variable">HP</param>
                             <param id="1" name="Value">50</param>
-                        </action>
-                        <action behavior="Flash" id="0" name="Flash" sid="104655090644054" type="Raley">
-                            <param id="0" name="&apos;On&apos; time">0.075</param>
-                            <param id="1" name="&apos;Off&apos; time">0.075</param>
-                            <param id="2" name="Duration">0.75</param>
                         </action>
                         <action id="0" name="Spawn another object" sid="756462961574247" type="Raley">
                             <param id="0" name="Object">BloodSplash</param>
@@ -297,7 +288,7 @@
                     </conditions>
                     <actions>
                         <action id="-10" name="Add to" sid="437469802504556" type="System">
-                            <param id="0" name="Variable">WeaponEquiped</param>
+                            <param id="0" name="Variable">TechSelected</param>
                             <param id="1" name="Value">1</param>
                         </action>
                     </actions>
@@ -305,7 +296,7 @@
                 <event-block sid="588713602085310">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="336977987087638" type="System">
-                            <param id="0" name="Variable">WeaponEquiped</param>
+                            <param id="0" name="Variable">TechSelected</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
@@ -320,7 +311,7 @@
                 <event-block sid="878576645759403">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="978632967650594" type="System">
-                            <param id="0" name="Variable">WeaponEquiped</param>
+                            <param id="0" name="Variable">TechSelected</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
@@ -335,7 +326,7 @@
                 <event-block sid="576238983069893">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="264145589078308" type="System">
-                            <param id="0" name="Variable">WeaponEquiped</param>
+                            <param id="0" name="Variable">TechSelected</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">2</param>
                         </condition>
@@ -350,14 +341,14 @@
                 <event-block sid="505879038832538">
                     <conditions>
                         <condition id="-14" name="Compare variable" sid="417696272024242" type="System">
-                            <param id="0" name="Variable">WeaponEquiped</param>
+                            <param id="0" name="Variable">TechSelected</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">3</param>
                         </condition>
                     </conditions>
                     <actions>
                         <action id="-9" name="Set value" sid="809209058600006" type="System">
-                            <param id="0" name="Variable">WeaponEquiped</param>
+                            <param id="0" name="Variable">TechSelected</param>
                             <param id="1" name="Value">0</param>
                         </action>
                     </actions>

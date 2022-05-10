@@ -22,7 +22,6 @@
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Fade" version="1">Fade</behavior>
-        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Pin" version="1">Pin</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="jumpthru" version="1">Jump-thru</behavior>
@@ -134,9 +133,6 @@
                 </behavior-type>
                 <behavior-type name="Solid" sid="538975175257830">
                     <behavior id="solid" />
-                </behavior-type>
-                <behavior-type name="Flash" sid="189647083771442">
-                    <behavior id="Flash" />
                 </behavior-type>
             </behaviors>
             <animation-folder>

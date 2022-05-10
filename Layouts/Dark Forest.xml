@@ -271,16 +271,16 @@
                         <x-randomiser>150</x-randomiser>
                         <y-randomiser>150</y-randomiser>
                         <speed-randomiser->0</speed-randomiser->
-                        <size-randomiser>0</size-randomiser>
+                        <size-randomiser>24</size-randomiser>
                         <grow-rate-randomiser>0</grow-rate-randomiser>
                         <particle-lifetime-properties></particle-lifetime-properties>
                         <acceleration>0</acceleration>
-                        <gravity>1250</gravity>
+                        <gravity>500</gravity>
                         <angle-randomiser>0</angle-randomiser>
                         <speed-randomiser>800</speed-randomiser>
                         <opacity-randomiser>0</opacity-randomiser>
-                        <destroy-mode>Timeout expired</destroy-mode>
-                        <timeout>3</timeout>
+                        <destroy-mode>Fade to invisible</destroy-mode>
+                        <timeout>2</timeout>
                     </properties>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -338,7 +338,6 @@
                                 <initial-state>Enabled</initial-state>
                             </properties>
                         </behavior-instance>
-                        <behavior-instance type="Flash" />
                     </behavior-instances>
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
@@ -371,8 +370,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>736</x>
-                        <y>2592</y>
+                        <x>992</x>
+                        <y>-352</y>
                         <z>0</z>
                         <width>224</width>
                         <height>288</height>
