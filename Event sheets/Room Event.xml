@@ -4,6 +4,7 @@
     <name>Room Event</name>
     <events>
         <include>Raley Indoors</include>
+        <variable comment="Se aceitou dormir ou cancelou" constant="0" name="sleepAccepted" sid="921252630513902" static="0" type="number">0</variable>
         <variable comment="Se está interagindo com objetos" constant="0" name="isPlayerInteracting" sid="270757858650848" static="0" type="number">0</variable>
         <variable comment="Se o dialogo já foi aberto" constant="0" name="dialogueAlreadyOpenned" sid="571714590011470" static="0" type="number">100</variable>
         <variable comment="Qual dialogo esta rodando no momento" constant="0" name="dialogueRunning" sid="980566655660610" static="0" type="number">0</variable>
@@ -13,6 +14,12 @@
                 <condition id="-2" name="On start of layout" sid="108322077391762" type="System" />
             </conditions>
             <actions>
+                <action id="-1" name="Set X" sid="700567749055541" type="Raley">
+                    <param id="0" name="X">1088</param>
+                </action>
+                <action id="-2" name="Set Y" sid="845889708870758" type="Raley">
+                    <param id="0" name="Y">1134</param>
+                </action>
                 <action id="6" name="Stop" sid="320728595242622" type="Audio">
                     <param id="0" name="Tag">&quot;MenuSong&quot;</param>
                 </action>
@@ -20,16 +27,33 @@
                     <param id="0" name="Fade-out time">2</param>
                 </action>
                 <action behavior="Fade" id="1" name="Start fade" sid="920635291357322" type="Fade" />
-                <action id="0" name="Play" sid="180575474105469" type="Audio">
-                    <param id="0" name="Audio file">WindYorlan</param>
-                    <param id="2" name="Loop">1</param>
-                    <param id="3" name="Volume">AmbienteVolume</param>
-                    <param id="1" name="Tag (optional)">&quot;RoomWind&quot;</param>
+                <action id="-9" name="Set value" sid="111868955051258" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Value">1</param>
                 </action>
+                <action id="4" name="Set animation" sid="943371974076742" type="Raley">
+                    <param id="0" name="Animation">&quot;InteractOut&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="2" name="Stop" sid="161084337436124" type="Raley" />
                 <action id="-16" name="Wait" sid="306143598248284" type="System">
                     <param id="0" name="Seconds">3</param>
                 </action>
-                <action id="-9" name="Set value" sid="573737020077749" type="System">
+                <action id="3" name="Start" sid="623697293779571" type="Raley">
+                    <param id="0" name="From">0</param>
+                </action>
+                <action id="4" name="Set animation" sid="830255678890743" type="Raley">
+                    <param id="0" name="Animation">&quot;InteractOut&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="587132451762452" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-9" name="Set value" sid="367329056205301" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="786789996392995" type="System">
                     <param id="0" name="Variable">dialogueAlreadyOpenned</param>
                     <param id="1" name="Value">0</param>
                 </action>
@@ -95,6 +119,9 @@
                         <action id="0" name="Set text" sid="960458694054717" type="Dialogue">
                             <param id="0" name="Text">&quot;&quot;</param>
                         </action>
+                        <action id="0" name="Set text" sid="466036637764645" type="DialogueUI">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
                         <action id="-15" name="Set visible" sid="730233346518804" type="InteractAction">
                             <param id="0" name="Visibility">0</param>
                         </action>
@@ -141,6 +168,9 @@
                         <action id="0" name="Set text" sid="123171624691002" type="Dialogue">
                             <param id="0" name="Text">&quot;&quot;</param>
                         </action>
+                        <action id="0" name="Set text" sid="902349500213963" type="DialogueUI">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
                         <action id="-9" name="Set value" sid="926671279965825" type="System">
                             <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Value">1</param>
@@ -158,16 +188,6 @@
                         </action>
                         <action id="-16" name="Wait" sid="260022296093424" type="System">
                             <param id="0" name="Seconds">0.90</param>
-                        </action>
-                        <action id="7" name="Set mirrored" sid="180555487930457" type="Raley">
-                            <param id="0" name="State">1</param>
-                        </action>
-                        <action id="-1" name="Set X" sid="980661375450732" type="Raley">
-                            <param id="0" name="X">496</param>
-                        </action>
-                        <action id="4" name="Set animation" sid="742723858984624" type="Raley">
-                            <param id="0" name="Animation">&quot;Sleep&quot;</param>
-                            <param id="1" name="From">1</param>
                         </action>
                     </actions>
                 </event-block>
@@ -200,6 +220,11 @@
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">1</param>
                         </condition>
+                        <condition id="-14" name="Compare variable" sid="488142592385493" type="System">
+                            <param id="0" name="Variable">dialogueRunning</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
                         <condition id="-8" name="Compare two values" sid="235270091736252" type="System">
                             <param id="0" name="First value">len(Dialogue.Text)</param>
                             <param id="1" name="Comparison">0</param>
@@ -207,7 +232,7 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="115283533871787" type="CloseQuote">
+                        <action id="-15" name="Set visible" sid="249707687911046" type="NextQuote">
                             <param id="0" name="Visibility">1</param>
                         </action>
                     </actions>
@@ -234,55 +259,249 @@
                         </condition>
                     </conditions>
                     <actions>
-                        <action id="-15" name="Set visible" sid="917072304522836" type="RaleyIconDialog">
+                        <action id="0" name="Set text" sid="463719046378944" type="Dialogue">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="906909452647114" type="Dialogue">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-9" name="Set value" sid="101091710542983" type="System">
-                            <param id="0" name="Variable">dialogueAlreadyOpenned</param>
-                            <param id="1" name="Value">1</param>
-                        </action>
-                        <action id="-9" name="Set value" sid="483082485956377" type="System">
+                        <action id="-9" name="Set value" sid="504672072701908" type="System">
                             <param id="0" name="Variable">dialogueRunning</param>
                             <param id="1" name="Value">2</param>
                         </action>
-                        <action id="-9" name="Set value" sid="527725482069687" type="System">
+                        <action id="-15" name="Set visible" sid="387825089055214" type="DialogueUI">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="218898762604493">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="944213530342386" type="System">
+                            <param id="0" name="Variable">dialogueRunning</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="606076127282340" type="System">
+                            <param id="0" name="Variable">isInteractive</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-6" name="Every X seconds" sid="735292890649928" type="System">
+                            <param id="0" name="Interval (seconds)">0.03</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="0" name="Set text" sid="221861265930724" type="DialogueUI">
+                            <param id="0" name="Text">left(&quot;DESEJA DORMI AGORA? ISSO IRA AVANCAR DE FASE, TENHA CERTEZA DE TER OLHADO TODO O QUARTO PRIMEIRO. PRESSIONE (F) PARA DORMIR OU (X) PARA CANCELAR.&quot;, len(DialogueUI.Text) + 1)</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="198544762840002" type="NextQuote">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="383613028432019">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="790089388210920" type="Keyboard">
+                            <param id="0" name="Key">70</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="443705335418774" type="System">
+                            <param id="0" name="Variable">isInteractive</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="505153401010628" type="System">
+                            <param id="0" name="Variable">dialogueRunning</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="174435824028093" type="System">
+                            <param id="0" name="First value">len(DialogueUI.Text)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">145</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="608399181901235" type="System">
+                            <param id="0" name="Variable">sleepAccepted</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="718250655052153">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="973866366500418" type="System">
+                            <param id="0" name="Variable">sleepAccepted</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="421415355544941" type="RaleyIconDialog">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="487990279408271" type="System">
+                            <param id="0" name="Variable">dialogueAlreadyOpenned</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="592700908456145" type="System">
+                            <param id="0" name="Variable">dialogueRunning</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="104479494940370" type="System">
                             <param id="0" name="Variable">isPlayerInteracting</param>
                             <param id="1" name="Value">3</param>
                         </action>
-                        <action id="0" name="Set text" sid="192837386079571" type="Dialogue">
+                        <action id="0" name="Set text" sid="539905705513022" type="Dialogue">
                             <param id="0" name="Text">&quot;&quot;</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="796352101398955" type="NextQuote">
+                        <action id="0" name="Set text" sid="181798162789679" type="DialogueUI">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="831275596196969" type="DialogueUI">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="370352827197092" type="CloseQuote">
+                        <action id="-15" name="Set visible" sid="142798358779844" type="Dialogue">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="812897872657292" type="DialogueBox">
+                        <action id="-15" name="Set visible" sid="826595668890710" type="NextQuote">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action id="-15" name="Set visible" sid="751351149891404" type="Dialogue">
+                        <action id="-15" name="Set visible" sid="367514217899621" type="CloseQuote">
                             <param id="0" name="Visibility">0</param>
                         </action>
-                        <action behavior="Fade" id="2" name="Set fade-in time" sid="120366171833436" type="Fade">
-                            <param id="0" name="Fade-in time">3</param>
+                        <action id="-15" name="Set visible" sid="176814809861615" type="DialogueBox">
+                            <param id="0" name="Visibility">0</param>
                         </action>
-                        <action behavior="Fade" id="1" name="Start fade" sid="716294953606051" type="Fade" />
-                        <action behavior="Fade" id="3" name="Set wait time" sid="277671291296855" type="Fade">
-                            <param id="0" name="Wait time">3</param>
+                        <action id="7" name="Set mirrored" sid="707226473503227" type="Raley">
+                            <param id="0" name="State">1</param>
                         </action>
-                        <action id="-16" name="Wait" sid="243988684158697" type="System">
-                            <param id="0" name="Seconds">3</param>
+                        <action id="-1" name="Set X" sid="860866948457529" type="Raley">
+                            <param id="0" name="X">496</param>
                         </action>
-                        <action id="3" name="Set volume" sid="807682114180110" type="Audio">
+                        <action id="4" name="Set animation" sid="931123343434143" type="Raley">
+                            <param id="0" name="Animation">&quot;Sleep&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="723215212730421" type="System">
+                            <param id="0" name="Variable">sleepAccepted</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="917799225795515" type="System">
+                            <param id="0" name="Variable">dialogueRunning</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="326492952336378" type="System">
+                            <param id="0" name="Seconds">1</param>
+                        </action>
+                        <action behavior="Fade" id="2" name="Set fade-in time" sid="991212274689441" type="Fade">
+                            <param id="0" name="Fade-in time">4</param>
+                        </action>
+                        <action behavior="Fade" id="1" name="Start fade" sid="636907412526101" type="Fade" />
+                        <action behavior="Fade" id="3" name="Set wait time" sid="662380174452054" type="Fade">
+                            <param id="0" name="Wait time">4</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="842948750474038" type="System">
+                            <param id="0" name="Seconds">4</param>
+                        </action>
+                        <action id="3" name="Set volume" sid="346889964743892" type="Audio">
                             <param id="0" name="Tag">&quot;RoomWind&quot;</param>
                             <param id="1" name="dB">-5</param>
                         </action>
-                        <action id="-16" name="Wait" sid="832177862860709" type="System">
-                            <param id="0" name="Seconds">3</param>
+                        <action id="-16" name="Wait" sid="149747727371716" type="System">
+                            <param id="0" name="Seconds">4</param>
                         </action>
-                        <action id="-2" name="Go to layout" sid="418481514547111" type="System">
+                        <action id="-2" name="Go to layout" sid="796004085353686" type="System">
                             <param id="0" name="Layout">Room After Sleep</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="423383752538086">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="267262527790644" type="Keyboard">
+                            <param id="0" name="Key">88</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="364192263600181" type="System">
+                            <param id="0" name="Variable">isInteractive</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="704991882658739" type="System">
+                            <param id="0" name="Variable">dialogueRunning</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-8" name="Compare two values" sid="340948855385813" type="System">
+                            <param id="0" name="First value">len(DialogueUI.Text)</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Second value">145</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="666832083442153" type="System">
+                            <param id="0" name="Variable">sleepAccepted</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="582194269280591">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="273419555904551" type="System">
+                            <param id="0" name="Variable">sleepAccepted</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="443971681648360" type="System">
+                            <param id="0" name="Variable">dialogueRunning</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="709438507992535" type="System">
+                            <param id="0" name="Variable">isPlayerInteracting</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="399326806682863" type="System">
+                            <param id="0" name="Variable">dialogueAlreadyOpenned</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="0" name="Set text" sid="691397831015180" type="Dialogue">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="0" name="Set text" sid="213375855032861" type="DialogueUI">
+                            <param id="0" name="Text">&quot;&quot;</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="855894797368582" type="DialogueUI">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="446532110422348" type="Dialogue">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="440721980190891" type="NextQuote">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="245801848061140" type="CloseQuote">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="572737453708062" type="DialogueBox">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="659540375937235" type="RaleyIconDialog">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="130788916761161" type="System">
+                            <param id="0" name="Seconds">0.90</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="124263934769028" type="System">
+                            <param id="0" name="Variable">dialogueRunning</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="633770958874781" type="System">
+                            <param id="0" name="Variable">isPlayerInteracting</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-9" name="Set value" sid="574319667604193" type="System">
+                            <param id="0" name="Variable">sleepAccepted</param>
+                            <param id="1" name="Value">0</param>
                         </action>
                     </actions>
                 </event-block>

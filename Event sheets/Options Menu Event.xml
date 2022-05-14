@@ -3,7 +3,6 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Options Menu Event</name>
     <events>
-        <variable constant="0" name="AmbienteVolume" sid="960583347057128" static="0" type="number">0</variable>
         <variable constant="0" name="MusicsMasterVolume" sid="662869588093901" static="0" type="number">0</variable>
         <event-group description="" sid="509970206800746" title="BackAndFowardPages">
             <sub-events>
@@ -120,46 +119,6 @@
                         </action>
                     </actions>
                 </event-block>
-                <event-block sid="517520564193144">
-                    <conditions>
-                        <condition id="6" name="On object clicked" sid="636889796517071" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">Title</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="108860544915216" type="Title">
-                            <param id="0" name="Instance variable">ID</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">3</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-11" name="Subtract from" sid="414087532007969" type="System">
-                            <param id="0" name="Variable">AmbienteVolume</param>
-                            <param id="1" name="Value">2</param>
-                        </action>
-                    </actions>
-                </event-block>
-                <event-block sid="205147592640317">
-                    <conditions>
-                        <condition id="6" name="On object clicked" sid="855542851189526" type="Mouse">
-                            <param id="0" name="Mouse button">0</param>
-                            <param id="1" name="Click type">0</param>
-                            <param id="2" name="Object clicked">Title</param>
-                        </condition>
-                        <condition id="-7" name="Compare instance variable" sid="459973092250884" type="Title">
-                            <param id="0" name="Instance variable">ID</param>
-                            <param id="1" name="Comparison">0</param>
-                            <param id="2" name="Value">4</param>
-                        </condition>
-                    </conditions>
-                    <actions>
-                        <action id="-10" name="Add to" sid="764359684375220" type="System">
-                            <param id="0" name="Variable">AmbienteVolume</param>
-                            <param id="1" name="Value">2</param>
-                        </action>
-                    </actions>
-                </event-block>
                 <event-block sid="738276224038227">
                     <conditions>
                         <condition id="-1" name="Every tick" sid="588666584552489" type="System" />
@@ -168,10 +127,6 @@
                         <action id="3" name="Set volume" sid="810743404789798" type="Audio">
                             <param id="0" name="Tag">&quot;MenuSong&quot;</param>
                             <param id="1" name="dB">MusicsMasterVolume</param>
-                        </action>
-                        <action id="3" name="Set volume" sid="340755375709219" type="Audio">
-                            <param id="0" name="Tag">&quot;RoomWind&quot;</param>
-                            <param id="1" name="dB">AmbienteVolume</param>
                         </action>
                     </actions>
                 </event-block>

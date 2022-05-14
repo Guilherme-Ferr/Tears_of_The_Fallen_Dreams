@@ -977,6 +977,10 @@
                 </animation>
             </animation-folder>
         </object-type>
+        <object-type name="DialogueUI" sid="573644305758747">
+            <plugin id="Spritefont2" />
+            <texture />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
