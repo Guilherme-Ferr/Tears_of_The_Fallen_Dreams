@@ -10,11 +10,8 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <display name="HTML5" />
     </configurations>
     <open-tabs>
-        <layout active="1" order="0">Room After Sleep</layout>
-        <layout order="2">Room</layout>
-        <event-sheet order="1">Room After Sleep Event</event-sheet>
-        <event-sheet order="3">Room Event</event-sheet>
-        <event-sheet order="4">Raley Action</event-sheet>
+        <layout order="0">Dark Forest</layout>
+        <event-sheet active="1" order="1">Raley Action</event-sheet>
     </open-tabs>
     <properties>
         <property expanded="1" name="About" />
@@ -24,10 +21,10 @@ you probably do not want to add any .uistate.xml files to the repository.-->
     </properties>
     <families-expanded root="1" />
     <folders-expanded>
-        <folder expanded="0" path="object-folder/" />
+        <folder expanded="1" path="object-folder/" />
         <folder expanded="1" path="layout-folder/" />
         <folder expanded="1" path="event-folder/" />
-        <folder expanded="1" path="event-folder/General/" />
+        <folder expanded="0" path="event-folder/General/" />
         <folder expanded="0" path="file-folder/" />
         <folder expanded="0" path="sound-folder/" />
         <folder expanded="0" path="music-folder/" />
@@ -40,7 +37,6 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/Limit/" />
         <folder expanded="1" path="animation-folder/DialogueBox/" />
         <folder expanded="1" path="animation-folder/InteractAction/" />
-        <folder expanded="1" path="animation-folder/NextQuote/" />
         <folder expanded="1" path="animation-folder/CloseQuote/" />
         <folder expanded="1" path="animation-folder/Interaction/" />
         <folder expanded="1" path="animation-folder/Dark/" />
@@ -63,7 +59,25 @@ you probably do not want to add any .uistate.xml files to the repository.-->
         <folder expanded="1" path="animation-folder/HPBar/" />
         <folder expanded="1" path="animation-folder/TechBar/" />
         <folder expanded="1" path="animation-folder/RaleyHouse/" />
-        <folder expanded="1" path="animation-folder/RaleyDamageHitbox/" />
-        <folder expanded="1" path="animation-folder/WeaponEquiped/" />
+        <folder expanded="1" path="animation-folder/consumableEquiped/" />
+        <folder expanded="1" path="animation-folder/Bush/" />
+        <folder expanded="1" path="animation-folder/CreditsIcon/" />
+        <folder expanded="1" path="animation-folder/Shovel/" />
+        <folder expanded="1" path="animation-folder/IntroductionScene/" />
+        <folder expanded="1" path="animation-folder/SmaugLogo/" />
+        <folder expanded="1" path="animation-folder/PistaxLogo/" />
+        <folder expanded="1" path="animation-folder/NextQuote/" />
+        <folder expanded="1" path="animation-folder/Take4/" />
+        <folder expanded="1" path="animation-folder/Take1/" />
+        <folder expanded="1" path="animation-folder/Take2/" />
+        <folder expanded="1" path="animation-folder/Take3/" />
+        <folder expanded="1" path="animation-folder/Hyena/" />
+        <folder expanded="1" path="animation-folder/HPMold/" />
+        <folder expanded="1" path="animation-folder/EnergyMold/" />
+        <folder expanded="1" path="animation-folder/KeyItemHolder/" />
+        <folder expanded="1" path="animation-folder/LeafSpawn/" />
+        <folder expanded="1" path="animation-folder/RaleyDamageZone/" />
+        <folder expanded="1" path="animation-folder/Cainan/" />
+        <folder expanded="1" path="animation-folder/CainansSuitcase/" />
     </folders-expanded>
 </c2uistate>

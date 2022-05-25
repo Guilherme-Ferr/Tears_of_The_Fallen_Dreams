@@ -72,9 +72,9 @@
             <instances>
                 <instance type="MainMenuOptions" uid="66">
                     <properties>
-                        <text>Credits</text>
+                        <text>Creditos</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial Rounded MT Bold,-96,400,0</font>
+                        <font>Garamond,-136,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -99,11 +99,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1728</x>
-                        <y>1152</y>
+                        <x>1760</x>
+                        <y>1096</y>
                         <z>0</z>
-                        <width>416</width>
-                        <height>128</height>
+                        <width>512</width>
+                        <height>192</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -113,9 +113,9 @@
                 </instance>
                 <instance type="MainMenuOptions" uid="67">
                     <properties>
-                        <text>Back</text>
+                        <text>Voltar</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial Rounded MT Bold,-96,400,0</font>
+                        <font>Garamond,-136,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -140,11 +140,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1728</x>
-                        <y>1344</y>
+                        <x>1760</x>
+                        <y>1352</y>
                         <z>0</z>
-                        <width>416</width>
-                        <height>128</height>
+                        <width>512</width>
+                        <height>192</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -156,7 +156,7 @@
                     <properties>
                         <text>Controles</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial Rounded MT Bold,-96,400,0</font>
+                        <font>Garamond,-136,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -170,7 +170,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>0</x>
+                        <x>96</x>
                         <y>0</y>
                         <z>0</z>
                         <width>1024</width>
@@ -186,7 +186,7 @@
                     <properties>
                         <text>Audio</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial Rounded MT Bold,-96,400,0</font>
+                        <font>Garamond,-136,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -200,7 +200,7 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1280</x>
+                        <x>1344</x>
                         <y>0</y>
                         <z>0</z>
                         <width>1024</width>
@@ -214,9 +214,9 @@
                 </instance>
                 <instance type="Title" uid="63">
                     <properties>
-                        <text>Use  A,D  para se movimentar horizontalmente</text>
+                        <text>Use  A &amp; D  para se movimentar horizontalmente.</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial Rounded MT Bold,-64,400,0</font>
+                        <font>Garamond,-69,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -230,10 +230,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>0</x>
-                        <y>416</y>
+                        <x>76</x>
+                        <y>320</y>
                         <z>0</z>
-                        <width>1024</width>
+                        <width>1184</width>
                         <height>352</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -244,9 +244,9 @@
                 </instance>
                 <instance type="Title" uid="65">
                     <properties>
-                        <text>ESPAÇO para pular</text>
+                        <text>ESPAÇO para pular.</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial Rounded MT Bold,-64,400,0</font>
+                        <font>Garamond,-69,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -260,8 +260,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>0</x>
-                        <y>608</y>
+                        <x>76</x>
+                        <y>537</y>
                         <z>0</z>
                         <width>1024</width>
                         <height>352</height>
@@ -274,9 +274,9 @@
                 </instance>
                 <instance type="Title" uid="69">
                     <properties>
-                        <text>CLIQUE ESQUERDO DO MOUSE para atacar com...</text>
+                        <text>F para interagir.</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial Rounded MT Bold,-64,400,0</font>
+                        <font>Garamond,-69,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -290,8 +290,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>0</x>
-                        <y>992</y>
+                        <x>76</x>
+                        <y>769</y>
                         <z>0</z>
                         <width>1024</width>
                         <height>352</height>
@@ -304,9 +304,9 @@
                 </instance>
                 <instance type="Title" uid="75">
                     <properties>
-                        <text>CLIQUE DIREITO DO MOUSE para atacar com...</text>
+                        <text>CLIQUE ESQUERDO DO MOUSE para atacar.</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial Rounded MT Bold,-64,400,0</font>
+                        <font>Garamond,-69,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -320,8 +320,8 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>0</x>
-                        <y>1248</y>
+                        <x>76</x>
+                        <y>1061</y>
                         <z>0</z>
                         <width>1024</width>
                         <height>352</height>
@@ -336,7 +336,7 @@
                     <properties>
                         <text>&gt;</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial Rounded MT Bold,-96,400,0</font>
+                        <font>Garamond,-69,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -362,41 +362,11 @@
                         <opacity>1</opacity>
                     </world>
                 </instance>
-                <instance type="Title" uid="61">
-                    <properties>
-                        <text>CONTROL para se agachar</text>
-                        <initial-visibility>Visible</initial-visibility>
-                        <font>Arial Rounded MT Bold,-64,400,0</font>
-                        <color>255,255,255</color>
-                        <horizontal-alignment>Center</horizontal-alignment>
-                        <vertical-alignment>Center</vertical-alignment>
-                        <hotspot>Top-left</hotspot>
-                        <wrapping>Word</wrapping>
-                        <line-height>0</line-height>
-                    </properties>
-                    <instance-variables>
-                        <ID>0</ID>
-                    </instance-variables>
-                    <blend-mode>0</blend-mode>
-                    <effect-fallback>0</effect-fallback>
-                    <world>
-                        <x>0</x>
-                        <y>768</y>
-                        <z>0</z>
-                        <width>1024</width>
-                        <height>352</height>
-                        <depth>0</depth>
-                        <hotspotX>0</hotspotX>
-                        <hotspotY>0</hotspotY>
-                        <angle>0</angle>
-                        <opacity>1</opacity>
-                    </world>
-                </instance>
                 <instance type="Title" uid="81">
                     <properties>
                         <text>&lt;</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial Rounded MT Bold,-96,400,0</font>
+                        <font>Garamond,-69,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -426,7 +396,7 @@
                     <properties>
                         <text>Musicas</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial Rounded MT Bold,-64,400,0</font>
+                        <font>Garamond,-69,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>

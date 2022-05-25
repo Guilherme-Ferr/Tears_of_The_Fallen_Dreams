@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Logos Intro</name>
+    <events>
+        <event-block sid="384427980175162">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="926265909926470" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="341718808761304" type="Fade">
+                    <param id="0" name="Fade-out time">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="771762361571731" type="Fade" />
+                <action disabled="1" id="0" name="Play" sid="725574669010964" type="Audio">
+                    <param id="0" name="Audio file">Main Menu Theme</param>
+                    <param id="2" name="Loop">1</param>
+                    <param id="3" name="Volume">MusicsMasterVolume</param>
+                    <param id="1" name="Tag (optional)">&quot;MenuSong&quot;</param>
+                </action>
+                <action id="-16" name="Wait" sid="657364902843797" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="275065849851046" type="SmaugLogo">
+                    <param id="0" name="Fade-out time">0.5</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="458280358063205" type="SmaugLogo" />
+                <action id="-16" name="Wait" sid="732357490881454" type="System">
+                    <param id="0" name="Seconds">0.75</param>
+                </action>
+                <action id="-15" name="Set visible" sid="850228242111205" type="PistaxLogo">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="2" name="Set fade-in time" sid="303182881887668" type="PistaxLogo">
+                    <param id="0" name="Fade-in time">0.5</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="523978101237918" type="PistaxLogo" />
+                <action id="-16" name="Wait" sid="894113844078271" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="260696693647517" type="Fade">
+                    <param id="0" name="Fade-out time">0</param>
+                </action>
+                <action behavior="Fade" id="2" name="Set fade-in time" sid="489200000139524" type="Fade">
+                    <param id="0" name="Fade-in time">0.5</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="741139122447439" type="Fade" />
+                <action id="-16" name="Wait" sid="941949679336884" type="System">
+                    <param id="0" name="Seconds">1</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="256043178258613" type="System">
+                    <param id="0" name="Layout">Initial Scene</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

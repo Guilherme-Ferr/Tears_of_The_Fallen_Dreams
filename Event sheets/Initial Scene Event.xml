@@ -1,0 +1,581 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Initial Scene Event</name>
+    <events>
+        <event-block sid="223099402885834">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="247677131403444" type="System" />
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="150736243752893" type="Fade">
+                    <param id="0" name="Fade-out time">0.75</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="401530220517740" type="Fade" />
+                <action id="-15" name="Set visible" sid="118105904684863" type="TxtIntroduction">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="0" name="Set text" sid="642215898097646" type="TxtIntroduction">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="2" name="Stop" sid="474508010773340" type="IntroductionScene" />
+                <action id="-16" name="Wait" sid="499997088941203" type="System">
+                    <param id="0" name="Seconds">2</param>
+                </action>
+                <action id="-9" name="Set value" sid="110392392577037" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="795707254688559">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="810503384526865" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="532871439505950" type="System">
+                    <param id="0" name="Interval (seconds)">0.03</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="842638655343042" type="TxtIntroduction">
+                    <param id="0" name="Text">left(&quot;OUTRORA, UM RENOMADO E SAUDOSISTA IMPERADOR QUE FUNDOU UM IMPERIO COM SEU PROPRIO NOME CAUSOU DESGRACA  A TODOS AQUELES QUE ESTAVAM EM SEU CAMINHO.&quot;, len(TxtIntroduction.Text) + 1)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="133845333881165">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="624495065048197" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="236693936553674" type="System">
+                    <param id="0" name="First value">len(TxtIntroduction.Text)</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">147</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="292809406128746" type="InteractAction">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="267027404802310" type="InteractAction">
+                    <param id="0" name="Animation">&quot;Press&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="700243880611340">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="698420533930945" type="Keyboard">
+                    <param id="0" name="Key">70</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="487721894295926" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="957736752204972" type="System">
+                    <param id="0" name="First value">len(TxtIntroduction.Text)</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">147</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="477279267427432" type="InteractAction">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Set text" sid="350871545545414" type="TxtIntroduction">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="825334053261165" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Value">2</param>
+                </action>
+                <action id="3" name="Start" sid="379404558963471" type="IntroductionScene">
+                    <param id="0" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="707886183575587">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="666978060875835" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="364137146163654" type="System">
+                    <param id="0" name="Interval (seconds)">0.03</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="815130194348724" type="TxtIntroduction">
+                    <param id="0" name="Text">left(&quot;SUA AMBICAO ERA FORTALECER SEU IMPERIO, E TORNA-LO O MAIOR DA HISTORIA. DESTA FORMA, EXPANDIU SEUS TERRITORIOS MAIS E MAIS. APARENTAVA FAZER ISSO ATE QUE NAO SOBRASSE MAIS NENHUMA TERRA FORA DE SEUS DOMINIOS.&quot;, len(TxtIntroduction.Text) + 1)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="181125002428429">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="388091686316270" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="495975847729122" type="System">
+                    <param id="0" name="First value">len(TxtIntroduction.Text)</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">208</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="903110202817432" type="InteractAction">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="503288337849328" type="InteractAction">
+                    <param id="0" name="Animation">&quot;Press&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="989153371451946">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="208796007072132" type="Keyboard">
+                    <param id="0" name="Key">70</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="461101455470790" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="375986135559379" type="System">
+                    <param id="0" name="First value">len(TxtIntroduction.Text)</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">208</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="496725032729127" type="InteractAction">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Set text" sid="391967625071256" type="TxtIntroduction">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="195951772771645" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Value">3</param>
+                </action>
+                <action id="4" name="Set animation" sid="150059419079552" type="IntroductionScene">
+                    <param id="0" name="Animation">&quot;warField&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="942384412486056" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="602693706997805" type="Take1">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="207717939463005" type="Take1" />
+            </actions>
+        </event-block>
+        <event-block sid="416640293170897">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="831381812753642" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="325984643164666" type="System">
+                    <param id="0" name="Interval (seconds)">0.03</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="160689301173186" type="TxtIntroduction">
+                    <param id="0" name="Text">left(&quot;ENQUANTO AS TROPAS AVANCAVAM CONQUISTANDO CADA VEZ MAIS TERRITORIO, FORAM SENDO CRIADOS GRUPOS DE RESISTENCIA.&quot;, len(TxtIntroduction.Text) + 1)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="924284351175265">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="932854194629968" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="684445859973692" type="System">
+                    <param id="0" name="First value">len(TxtIntroduction.Text)</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">110</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="699389338858608" type="InteractAction">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="354029704019267" type="InteractAction">
+                    <param id="0" name="Animation">&quot;Press&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="912032778647519">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="859973298087152" type="Keyboard">
+                    <param id="0" name="Key">70</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="923166816474040" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">3</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="818931526718609" type="System">
+                    <param id="0" name="First value">len(TxtIntroduction.Text)</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">110</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="216776464068135" type="InteractAction">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Set text" sid="211534461707495" type="TxtIntroduction">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="505795563338943" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Value">4</param>
+                </action>
+                <action id="-16" name="Wait" sid="629820884341782" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action id="-15" name="Set visible" sid="897263081142009" type="Take2">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="791823506040894" type="Take2" />
+            </actions>
+        </event-block>
+        <event-block sid="389821705123076">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="221626716268204" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="374498548118841" type="System">
+                    <param id="0" name="Interval (seconds)">0.03</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="408062937700926" type="TxtIntroduction">
+                    <param id="0" name="Text">left(&quot;EM UMA CIDADELA CHAMADA YORLAN DENTRO DA ZONA DE CONFRONTO DA GUERRA, O CLA KURG, FAMOSO POR SUAS EXCENTRICAS HABILIDADES EM COMBATE, MARCHARAM ATE A ZONA DE CONFLITO.&quot;, len(TxtIntroduction.Text) + 1)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="363544553734100">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="302410206755973" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="191915167257010" type="System">
+                    <param id="0" name="First value">len(TxtIntroduction.Text)</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">167</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="846875181427067" type="InteractAction">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="571690734578288" type="InteractAction">
+                    <param id="0" name="Animation">&quot;Press&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="665008452242070">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="545376587301358" type="Keyboard">
+                    <param id="0" name="Key">70</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="364163273338660" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">4</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="898033591055845" type="System">
+                    <param id="0" name="First value">len(TxtIntroduction.Text)</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">167</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="885981708940629" type="InteractAction">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Set text" sid="807219668489411" type="TxtIntroduction">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="387511983929960" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Value">5</param>
+                </action>
+                <action id="-16" name="Wait" sid="603374060393936" type="System">
+                    <param id="0" name="Seconds">1.0</param>
+                </action>
+                <action behavior="Fade" id="2" name="Set fade-in time" sid="969805843948320" type="Take2">
+                    <param id="0" name="Fade-in time">0</param>
+                </action>
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="855127419616664" type="Take2">
+                    <param id="0" name="Fade-out time">0.5</param>
+                </action>
+                <action behavior="Fade" id="0" name="Restart fade" sid="115665168857937" type="Take2" />
+            </actions>
+        </event-block>
+        <event-block sid="265015642107020">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="188323417667180" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="986528370337076" type="System">
+                    <param id="0" name="Interval (seconds)">0.03</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="685298369449639" type="TxtIntroduction">
+                    <param id="0" name="Text">left(&quot;COLOCARAM SEU SANGUE E SUOR EM PROVA, ATE NAO RESTAR SOBREVIVENTES. BATALHAS FORAM VENCIDAS, MAS OS ATAQUES NUNCA CESSARAM.&quot;, len(TxtIntroduction.Text) + 1)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="860891167986654">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="732402065021021" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="886090199682383" type="System">
+                    <param id="0" name="First value">len(TxtIntroduction.Text)</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">123</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="652746423955531" type="InteractAction">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="823574108093451" type="InteractAction">
+                    <param id="0" name="Animation">&quot;Press&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="712424760434653">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="928724672256009" type="Keyboard">
+                    <param id="0" name="Key">70</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="670569303786169" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">5</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="327148091130568" type="System">
+                    <param id="0" name="First value">len(TxtIntroduction.Text)</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">123</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="831472662520249" type="InteractAction">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Set text" sid="777021416575738" type="TxtIntroduction">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="924072108971952" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Value">6</param>
+                </action>
+                <action id="-15" name="Set visible" sid="628091074609944" type="Take3">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="163743210046952">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="551391749701594" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">6</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="872899114016400" type="System">
+                    <param id="0" name="Interval (seconds)">0.03</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="465910537209421" type="TxtIntroduction">
+                    <param id="0" name="Text">left(&quot;COM A RUINA DA FORCA MILITAR DOS KURG, LINHA DE FRENTE E DEFENSORES DE SEUS CIDADAOS, GARTRIK NAO TEVE MISERICCRDIA DE SEQUER UMA CRIANCA, ELIMINANDO UM POR UM...&quot;, len(TxtIntroduction.Text) + 1)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="779328215121300">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="422280452314958" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">6</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="631449989822708" type="System">
+                    <param id="0" name="First value">len(TxtIntroduction.Text)</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">162</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="712012829658025" type="InteractAction">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="797274315752873" type="InteractAction">
+                    <param id="0" name="Animation">&quot;Press&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="580065945822875">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="896190251322691" type="Keyboard">
+                    <param id="0" name="Key">70</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="639684114460881" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">6</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="879363507239495" type="System">
+                    <param id="0" name="First value">len(TxtIntroduction.Text)</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">162</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="632875030659081" type="InteractAction">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Set text" sid="905055902445216" type="TxtIntroduction">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="607243162748879" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Value">7</param>
+                </action>
+                <action id="-15" name="Set visible" sid="897252757704289" type="Take4">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="160161739013454" type="Take4" />
+            </actions>
+        </event-block>
+        <event-block sid="760526568793072">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="341514071356659" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">7</param>
+                </condition>
+                <condition id="-6" name="Every X seconds" sid="200438463742396" type="System">
+                    <param id="0" name="Interval (seconds)">0.03</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Set text" sid="519118168004297" type="TxtIntroduction">
+                    <param id="0" name="Text">left(&quot;ATE A ULTIMA GUERREIRA...&quot;, len(TxtIntroduction.Text) + 1)</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="956527499208584">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="718461717155915" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">7</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="218875009458461" type="System">
+                    <param id="0" name="First value">len(TxtIntroduction.Text)</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">25</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="414147161133739" type="InteractAction">
+                    <param id="0" name="Visibility">1</param>
+                </action>
+                <action id="4" name="Set animation" sid="101499261600911" type="InteractAction">
+                    <param id="0" name="Animation">&quot;Press&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="211333529067788">
+            <conditions>
+                <condition id="0" name="On key pressed" sid="398805294171797" type="Keyboard">
+                    <param id="0" name="Key">70</param>
+                </condition>
+                <condition id="-14" name="Compare variable" sid="939844691697300" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">7</param>
+                </condition>
+                <condition id="-8" name="Compare two values" sid="691219260299261" type="System">
+                    <param id="0" name="First value">len(TxtIntroduction.Text)</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Second value">25</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-15" name="Set visible" sid="829940564304117" type="InteractAction">
+                    <param id="0" name="Visibility">0</param>
+                </action>
+                <action id="0" name="Set text" sid="238620763290979" type="TxtIntroduction">
+                    <param id="0" name="Text">&quot;&quot;</param>
+                </action>
+                <action id="-9" name="Set value" sid="370705471779526" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Value">8</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="543758560133220">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="781585671671146" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">8</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="904446281142266" type="Fade">
+                    <param id="0" name="Fade-out time">0</param>
+                </action>
+                <action behavior="Fade" id="2" name="Set fade-in time" sid="937907762130702" type="Fade">
+                    <param id="0" name="Fade-in time">2</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="230678015096400" type="Fade" />
+                <action id="-16" name="Wait" sid="906713773760150" type="System">
+                    <param id="0" name="Seconds">3</param>
+                </action>
+                <action id="-9" name="Set value" sid="818922903158408" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-2" name="Go to layout" sid="662069282248558" type="System">
+                    <param id="0" name="Layout">Main Menu</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

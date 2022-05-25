@@ -55,7 +55,7 @@
                     <properties>
                         <text>Tears of The Fallen Dreams</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial Rounded MT Bold,-96,400,0</font>
+                        <font>Garamond,-189,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -69,10 +69,10 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>480</x>
-                        <y>160</y>
+                        <x>448</x>
+                        <y>128</y>
                         <z>0</z>
-                        <width>1376</width>
+                        <width>1472</width>
                         <height>544</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
@@ -102,9 +102,9 @@
             <instances>
                 <instance type="PressStart" uid="48">
                     <properties>
-                        <text>Clique Para Começar</text>
+                        <text>Pressione Enter</text>
                         <initial-visibility>Visible</initial-visibility>
-                        <font>Arial Rounded MT Bold,-96,400,0</font>
+                        <font>Garamond,-136,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Center</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -126,11 +126,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>-320</x>
-                        <y>-96</y>
+                        <x>0</x>
+                        <y>0</y>
                         <z>0</z>
-                        <width>2912</width>
-                        <height>1888</height>
+                        <width>2304</width>
+                        <height>1760</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -159,9 +159,9 @@
             <instances>
                 <instance type="MainMenuOptions" uid="36">
                     <properties>
-                        <text>Play</text>
+                        <text>Jogar</text>
                         <initial-visibility>Invisible</initial-visibility>
-                        <font>Arial Rounded MT Bold,-96,400,0</font>
+                        <font>Garamond,-136,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -186,11 +186,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1728</x>
-                        <y>960</y>
+                        <x>1536</x>
+                        <y>788</y>
                         <z>0</z>
-                        <width>416</width>
-                        <height>128</height>
+                        <width>736</width>
+                        <height>288</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -200,9 +200,9 @@
                 </instance>
                 <instance type="MainMenuOptions" uid="37">
                     <properties>
-                        <text>Options</text>
+                        <text>Opções</text>
                         <initial-visibility>Invisible</initial-visibility>
-                        <font>Arial Rounded MT Bold,-96,400,0</font>
+                        <font>Garamond,-136,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -227,11 +227,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1728</x>
-                        <y>1152</y>
+                        <x>1824</x>
+                        <y>1044</y>
                         <z>0</z>
-                        <width>416</width>
-                        <height>128</height>
+                        <width>448</width>
+                        <height>288</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>
@@ -241,9 +241,9 @@
                 </instance>
                 <instance type="MainMenuOptions" uid="38">
                     <properties>
-                        <text>Exit</text>
+                        <text>Sair</text>
                         <initial-visibility>Invisible</initial-visibility>
-                        <font>Arial Rounded MT Bold,-96,400,0</font>
+                        <font>Garamond,-136,400,0</font>
                         <color>255,255,255</color>
                         <horizontal-alignment>Right</horizontal-alignment>
                         <vertical-alignment>Center</vertical-alignment>
@@ -268,11 +268,11 @@
                     <blend-mode>0</blend-mode>
                     <effect-fallback>0</effect-fallback>
                     <world>
-                        <x>1728</x>
-                        <y>1344</y>
+                        <x>1760</x>
+                        <y>1347</y>
                         <z>0</z>
-                        <width>416</width>
-                        <height>128</height>
+                        <width>512</width>
+                        <height>192</height>
                         <depth>0</depth>
                         <hotspotX>0</hotspotX>
                         <hotspotY>0</hotspotY>

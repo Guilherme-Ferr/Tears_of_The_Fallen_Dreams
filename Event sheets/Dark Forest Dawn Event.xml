@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Dark Forest Dawn Event</name>
+    <events>
+        <include>Raley Action</include>
+        <event-block sid="697148867171842">
+            <conditions>
+                <condition id="-2" name="On start of layout" sid="790788531943164" type="System" />
+            </conditions>
+            <actions>
+                <action id="3" name="Set volume" sid="254557958626895" type="Audio">
+                    <param id="0" name="Tag">&quot;ForestWind&quot;</param>
+                    <param id="1" name="dB">-0</param>
+                </action>
+                <action behavior="Fade" id="4" name="Set fade-out time" sid="654878632515137" type="Fade">
+                    <param id="0" name="Fade-out time">0.3</param>
+                </action>
+                <action behavior="Fade" id="1" name="Start fade" sid="664700369395978" type="Fade" />
+                <action id="-9" name="Set value" sid="264798384821674" type="System">
+                    <param id="0" name="Variable">isPlayerInteracting</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="456516211891445" type="System">
+                    <param id="0" name="Variable">dialogueRunning</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="844193361280865" type="System">
+                    <param id="0" name="Variable">dialogueAlreadyOpenned</param>
+                    <param id="1" name="Value">0</param>
+                </action>
+                <action id="-9" name="Set value" sid="391069461695822" type="System">
+                    <param id="0" name="Variable">hasFirstWeapon</param>
+                    <param id="1" name="Value">1</param>
+                </action>
+                <action id="-25" name="Move to bottom" sid="835005356355963" type="Raley" />
+                <action id="-25" name="Move to bottom" sid="317365144096410" type="Shovel" />
+                <action id="-25" name="Move to bottom" sid="211022136552530" type="CainansSuitcase" />
+                <action id="-25" name="Move to bottom" sid="834587523857579" type="Cainan" />
+            </actions>
+        </event-block>
+        <event-block sid="375239014877737">
+            <conditions>
+                <condition id="-6" name="Every X seconds" sid="623608525420045" type="System">
+                    <param id="0" name="Interval (seconds)">0.50</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="0" name="Spawn another object" sid="776603939510432" type="LeafSpawn">
+                    <param id="0" name="Object">LeafToFall</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">round(random(1,16))</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-group description="" sid="306880472537304" title="HideOnBush2">
+            <sub-events>
+                <event-block sid="547583529016274">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="446150967125941" type="Raley">
+                            <param id="0" name="Object">Interaction</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="852136185099572" type="Interaction">
+                            <param id="0" name="Instance variable">smileId</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="601917730060249" type="Raley">
+                            <param id="0" name="Instance variable">isHidden</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="576815739012376" type="Interaction">
+                            <param id="0" name="Object">Bush</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="901490315735554" type="System">
+                            <param id="0" name="Variable">isInteractive</param>
+                            <param id="1" name="Value">2</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="955202023333198" type="InteractAction">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="390826211877450" type="InteractAction">
+                            <param id="0" name="X">Raley.X</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="649274028253466" type="InteractAction">
+                            <param id="0" name="Y">Raley.Y - 300</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="199295360874609">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="550414396530635" type="Raley">
+                            <param id="0" name="Object">Bush</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="345224273381083" type="InteractAction">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="899946170846961">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="799797368480377" type="Keyboard">
+                            <param id="0" name="Key">70</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="371122842104923" type="Raley">
+                            <param id="0" name="Object">Bush</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="317417100514907" type="Raley">
+                            <param id="0" name="Instance variable">isHidden</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="4" name="Set jump strength" sid="561192284058955" type="Raley">
+                            <param id="0" name="Jump strength">750</param>
+                        </action>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="201826872344769" type="Raley">
+                            <param id="0" name="Control">2</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="919460587189172" type="System">
+                            <param id="0" name="Seconds">0.30</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="699896533732834" type="Bush">
+                            <param id="0" name="Height">310</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="837287782997018" type="Raley">
+                            <param id="0" name="Layer">&quot;Bushes&quot;</param>
+                        </action>
+                        <action id="-29" name="Move to object" sid="948856692923684" type="Raley">
+                            <param id="0" name="Where">1</param>
+                            <param id="1" name="Object">Bush</param>
+                        </action>
+                        <action id="0" name="Spawn another object" sid="443760815762557" type="Bush">
+                            <param id="0" name="Object">LeafHiddenSplash</param>
+                            <param id="1" name="Layer">&quot;Bushes&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="515960516121539" type="Raley">
+                            <param id="0" name="Instance variable">isHidden</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="221764301659450" type="System">
+                            <param id="0" name="Seconds">0.20</param>
+                        </action>
+                        <action id="-6" name="Set height" sid="264912362921728" type="Bush">
+                            <param id="0" name="Height">330</param>
+                        </action>
+                        <action behavior="Platform" id="4" name="Set jump strength" sid="187563212917531" type="Raley">
+                            <param id="0" name="Jump strength">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block any="1" sid="951620723861657">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="667604725147911" type="Keyboard">
+                            <param id="0" name="Key">70</param>
+                        </condition>
+                        <condition id="0" name="On key pressed" sid="828781721449193" type="Keyboard">
+                            <param id="0" name="Key">32</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="691144574434502">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="579936440673595" type="Raley">
+                                    <param id="0" name="Object">Bush</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="878667823530616" type="Raley">
+                                    <param id="0" name="Instance variable">isHidden</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="4" name="Set jump strength" sid="570868483587319" type="Raley">
+                                    <param id="0" name="Jump strength">750</param>
+                                </action>
+                                <action id="0" name="Spawn another object" sid="829007568595013" type="Bush">
+                                    <param id="0" name="Object">LeafHiddenSplash</param>
+                                    <param id="1" name="Layer">&quot;Bushes&quot;</param>
+                                    <param id="2" name="Image point">1</param>
+                                </action>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="524014887028876" type="Raley">
+                                    <param id="0" name="Control">2</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="533232642078592" type="Bush">
+                                    <param id="0" name="Height">350</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="794303716610554" type="System">
+                                    <param id="0" name="Seconds">0.30</param>
+                                </action>
+                                <action id="-6" name="Set height" sid="114718401596606" type="Bush">
+                                    <param id="0" name="Height">330</param>
+                                </action>
+                                <action id="-29" name="Move to object" sid="715995696835390" type="Raley">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Object">Bush</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="448302850766542" type="Raley">
+                                    <param id="0" name="Layer">&quot;Main&quot;</param>
+                                </action>
+                                <action behavior="Platform" id="4" name="Set jump strength" sid="791157745778308" type="Raley">
+                                    <param id="0" name="Jump strength">1200</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="716075177918302" type="Raley">
+                                    <param id="0" name="Instance variable">isHidden</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block any="1" sid="425620734485148">
+                    <conditions>
+                        <condition id="0" name="On click" sid="687798409741037" type="Mouse">
+                            <param id="0" name="Mouse button">0</param>
+                            <param id="1" name="Click type">0</param>
+                        </condition>
+                    </conditions>
+                    <actions />
+                    <sub-events>
+                        <event-block sid="619847776043006">
+                            <conditions>
+                                <condition id="1" name="Is overlapping another object" sid="109076246229030" type="Raley">
+                                    <param id="0" name="Object">Bush</param>
+                                </condition>
+                                <condition id="-7" name="Compare instance variable" sid="992411004507760" type="Raley">
+                                    <param id="0" name="Instance variable">isHidden</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="4" name="Set jump strength" sid="234441073255906" type="Raley">
+                                    <param id="0" name="Jump strength">1200</param>
+                                </action>
+                                <action id="-29" name="Move to object" sid="342008351425308" type="Raley">
+                                    <param id="0" name="Where">0</param>
+                                    <param id="1" name="Object">Bush</param>
+                                </action>
+                                <action id="-26" name="Move to layer" sid="919353413742446" type="Raley">
+                                    <param id="0" name="Layer">&quot;Main&quot;</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="682171566249286" type="Raley">
+                                    <param id="0" name="Instance variable">isHidden</param>
+                                    <param id="1" name="Value">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="546669876824158">
+                    <conditions>
+                        <condition id="1" inverted="1" name="Is overlapping another object" sid="629934083228422" type="Raley">
+                            <param id="0" name="Object">Bush</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="359436957312867" type="Raley">
+                            <param id="0" name="Instance variable">isHidden</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action disabled="1" id="0" name="Spawn another object" sid="701580904978223" type="Bush">
+                            <param id="0" name="Object">LeafHiddenSplash</param>
+                            <param id="1" name="Layer">&quot;Bushes&quot;</param>
+                            <param id="2" name="Image point">1</param>
+                        </action>
+                        <action id="-29" name="Move to object" sid="986806255520926" type="Raley">
+                            <param id="0" name="Where">0</param>
+                            <param id="1" name="Object">Bush</param>
+                        </action>
+                        <action id="-26" name="Move to layer" sid="674268958418688" type="Raley">
+                            <param id="0" name="Layer">&quot;Main&quot;</param>
+                        </action>
+                        <action behavior="Platform" id="4" name="Set jump strength" sid="454373864408113" type="Raley">
+                            <param id="0" name="Jump strength">1200</param>
+                        </action>
+                        <action id="-10" name="Set value" sid="949938538954861" type="Raley">
+                            <param id="0" name="Instance variable">isHidden</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                        <action id="-15" name="Set visible" sid="909032903888715" type="InteractAction">
+                            <param id="0" name="Visibility">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="196628188071549" title="ShovelInteraction2">
+            <sub-events>
+                <event-block sid="230416064261637">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="718194404336356" type="Raley">
+                            <param id="0" name="Object">Interaction</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="225827261621514" type="Interaction">
+                            <param id="0" name="Instance variable">smileId</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                        <condition id="1" name="Is overlapping another object" sid="234883473343230" type="Interaction">
+                            <param id="0" name="Object">Shovel</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="963738258328197" type="InteractAction">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="960387804662826" type="InteractAction">
+                            <param id="0" name="X">Raley.X</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="698721803531760" type="InteractAction">
+                            <param id="0" name="Y">Raley.Y - 300</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="809779106115612">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="764171966206621" type="Keyboard">
+                                    <param id="0" name="Key">70</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="688870049830429" type="Shovel" />
+                                <action id="0" name="Spawn another object" sid="922589325232988" type="KeyItemHolder">
+                                    <param id="0" name="Object">Shovel</param>
+                                    <param id="1" name="Layer">&quot;UI&quot;</param>
+                                    <param id="2" name="Image point">0</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="564234069668929" type="Shovel">
+                                    <param id="0" name="Instance variable">IsCollected</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+                <event-block sid="595541516847812">
+                    <conditions>
+                        <condition id="1" name="Is overlapping another object" sid="669994309499625" type="Raley">
+                            <param id="0" name="Object">Interaction</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="866946487422310" type="Interaction">
+                            <param id="0" name="Instance variable">smileId</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="981462571291891" type="Shovel">
+                            <param id="0" name="Instance variable">IsCollected</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-15" name="Set visible" sid="583357960993881" type="InteractAction">
+                            <param id="0" name="Visibility">1</param>
+                        </action>
+                        <action id="-1" name="Set X" sid="880115128043705" type="InteractAction">
+                            <param id="0" name="X">Raley.X</param>
+                        </action>
+                        <action id="-2" name="Set Y" sid="413289715314718" type="InteractAction">
+                            <param id="0" name="Y">Raley.Y - 300</param>
+                        </action>
+                    </actions>
+                    <sub-events>
+                        <event-block sid="702688300149119">
+                            <conditions>
+                                <condition id="0" name="On key pressed" sid="701355779746775" type="Keyboard">
+                                    <param id="0" name="Key">70</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="157677186092804" type="Shovel" />
+                                <action id="-9" name="Set value" sid="730789656190446" type="System">
+                                    <param id="0" name="Variable">foundRing</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="179526866536643">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="122219550208004" type="System" />
+                <condition id="-1" name="Compare X" sid="514161722681593" type="Cainan">
+                    <param id="0" name="Comparison">2</param>
+                    <param id="1" name="X co-ordinate">Raley.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="549166272041926" type="Cainan">
+                    <param id="0" name="State">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="700082555810002">
+            <conditions>
+                <condition id="-1" name="Every tick" sid="960370874323889" type="System" />
+                <condition id="-1" name="Compare X" sid="939168292221144" type="Cainan">
+                    <param id="0" name="Comparison">4</param>
+                    <param id="1" name="X co-ordinate">Raley.X</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="7" name="Set mirrored" sid="848088814958556" type="Cainan">
+                    <param id="0" name="State">0</param>
+                </action>
+            </actions>
+        </event-block>
+    </events>
+</c2eventsheet>

@@ -3,8 +3,10 @@
     <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
     <name>Raley Action</name>
     <events>
+        <variable constant="0" name="foundRing" sid="338561354059506" static="0" type="number">0</variable>
         <variable constant="0" name="hasFirstWeapon" sid="231391568393984" static="0" type="number">0</variable>
-        <variable constant="0" name="TechSelected" sid="650782678661998" static="0" type="number">0</variable>
+        <variable constant="0" name="consumableSelected" sid="984344055543473" static="0" type="number">0</variable>
+        <variable constant="0" name="itemSelected" sid="650782678661998" static="0" type="number">0</variable>
         <event-group description="General moviments of the main character" sid="657035325937873" title="MovementAction">
             <sub-events>
                 <event-block sid="696161987487861">
@@ -14,6 +16,9 @@
                     <actions>
                         <action behavior="Platform" id="1" name="Set max speed" sid="243937656118647" type="Raley">
                             <param id="0" name="Max Speed">800</param>
+                        </action>
+                        <action behavior="Platform" id="13" name="Set double-jump" sid="170311690651325" type="Raley">
+                            <param id="0" name="State">0</param>
                         </action>
                     </actions>
                 </event-block>
@@ -27,6 +32,11 @@
                         </condition>
                         <condition id="-14" name="Compare variable" sid="511728623923366" type="System">
                             <param id="0" name="Variable">isPlayerInteracting</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="211138935321651" type="Raley">
+                            <param id="0" name="Instance variable">isAtacking</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
@@ -47,6 +57,11 @@
                         <condition behavior="Platform" id="4" inverted="1" name="Is falling" sid="632152247136743" type="Raley" />
                         <condition id="-14" name="Compare variable" sid="797735513857052" type="System">
                             <param id="0" name="Variable">isPlayerInteracting</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="975705826728258" type="Raley">
+                            <param id="0" name="Instance variable">isAtacking</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
@@ -93,6 +108,11 @@
                         <condition behavior="Platform" id="4" inverted="1" name="Is falling" sid="493736742158191" type="Raley" />
                         <condition id="-14" name="Compare variable" sid="778853237626285" type="System">
                             <param id="0" name="Variable">isPlayerInteracting</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-7" name="Compare instance variable" sid="896021541148907" type="Raley">
+                            <param id="0" name="Instance variable">isAtacking</param>
                             <param id="1" name="Comparison">0</param>
                             <param id="2" name="Value">0</param>
                         </condition>
@@ -145,14 +165,16 @@
                         <action behavior="Platform" id="7" name="Simulate control" sid="973760922206978" type="Raley">
                             <param id="0" name="Control">2</param>
                         </action>
-                        <action id="-5" name="Set width" sid="353312654459698" type="TechBar">
-                            <param id="0" name="Width">TechBar.Width + Raley.Tech * dt</param>
-                        </action>
                     </actions>
                 </event-block>
                 <event-block sid="499921708892324">
                     <conditions>
                         <condition behavior="Platform" id="5" name="On jump" sid="631270875334846" type="Raley" />
+                        <condition id="-7" name="Compare instance variable" sid="936737806300697" type="Raley">
+                            <param id="0" name="Instance variable">isAtacking</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="615489287455934" type="Raley">
@@ -167,20 +189,133 @@
                 <event-block sid="236051228453291">
                     <conditions>
                         <condition behavior="Platform" id="6" name="On fall" sid="803309310984540" type="Raley" />
+                        <condition id="-7" name="Compare instance variable" sid="193411426462429" type="Raley">
+                            <param id="0" name="Instance variable">isAtacking</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
                     </conditions>
                     <actions>
                         <action id="4" name="Set animation" sid="499153331635261" type="Raley">
                             <param id="0" name="Animation">&quot;Fall&quot;</param>
                             <param id="1" name="From">1</param>
                         </action>
-                        <action behavior="Platform" id="13" name="Set double-jump" sid="910030498976907" type="Raley">
+                    </actions>
+                </event-block>
+                <event-block sid="680074996049423">
+                    <conditions>
+                        <condition behavior="Platform" id="6" name="On fall" sid="395248604953398" type="Raley" />
+                        <condition id="-7" name="Compare instance variable" sid="442877459760925" type="Raley">
+                            <param id="0" name="Instance variable">isAtacking</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                        <condition id="-14" name="Compare variable" sid="403054646010668" type="System">
+                            <param id="0" name="Variable">foundRing</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Platform" id="13" name="Set double-jump" sid="472270807272309" type="Raley">
                             <param id="0" name="State">1</param>
+                        </action>
+                        <action id="-12" name="Subtract from" sid="724941983004047" type="Raley">
+                            <param id="0" name="Instance variable">tech</param>
+                            <param id="1" name="Value">50</param>
                         </action>
                     </actions>
                 </event-block>
             </sub-events>
         </event-group>
-        <event-group description="" sid="973675908008823" title="Combat">
+        <event-group description="" sid="435414766723577" title="ChangeConsumable">
+            <sub-events>
+                <event-block sid="771005597554854">
+                    <conditions>
+                        <condition id="-1" name="Every tick" sid="146137837634749" type="System" />
+                    </conditions>
+                    <actions>
+                        <action id="-5" name="Set width" sid="801404871201025" type="TechBar">
+                            <param id="0" name="Width">Raley.tech</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="497875989949941">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="146383435232699" type="Keyboard">
+                            <param id="0" name="Key">69</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-10" name="Add to" sid="437469802504556" type="System">
+                            <param id="0" name="Variable">consumableSelected</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="588713602085310">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="336977987087638" type="System">
+                            <param id="0" name="Variable">consumableSelected</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">0</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="681818362562542" type="consumableEquiped">
+                            <param id="0" name="Animation">&quot;Weapon0&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="878576645759403">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="978632967650594" type="System">
+                            <param id="0" name="Variable">consumableSelected</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">1</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="182024709373097" type="consumableEquiped">
+                            <param id="0" name="Animation">&quot;Weapon1&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="576238983069893">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="264145589078308" type="System">
+                            <param id="0" name="Variable">consumableSelected</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">2</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="546836330029301" type="consumableEquiped">
+                            <param id="0" name="Animation">&quot;Weapon2&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block sid="505879038832538">
+                    <conditions>
+                        <condition id="-14" name="Compare variable" sid="417696272024242" type="System">
+                            <param id="0" name="Variable">consumableSelected</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">3</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-9" name="Set value" sid="809209058600006" type="System">
+                            <param id="0" name="Variable">consumableSelected</param>
+                            <param id="1" name="Value">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-group description="" sid="973675908008823" title="CombatAndDamage">
             <sub-events>
                 <event-block sid="863991883100300">
                     <conditions>
@@ -192,11 +327,22 @@
                     </conditions>
                     <actions />
                     <sub-events>
+                        <event-block sid="270652310301254">
+                            <conditions>
+                                <condition id="-1" name="Every tick" sid="770420706230310" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-5" name="Set width" sid="438546950665016" type="HPBar">
+                                    <param id="0" name="Width">Raley.HP</param>
+                                </action>
+                            </actions>
+                        </event-block>
                         <event-block sid="471893611238016">
                             <conditions>
                                 <condition id="0" name="On collision with another object" sid="855152140869896" type="Raley">
                                     <param id="0" name="Object">EnemyDamageHitbox</param>
                                 </condition>
+                                <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="752924255254914" type="Raley" />
                             </conditions>
                             <actions>
                                 <action id="0" name="Play" sid="260269659106183" type="Audio">
@@ -209,6 +355,11 @@
                                     <param id="0" name="Instance variable">HP</param>
                                     <param id="1" name="Value">50</param>
                                 </action>
+                                <action behavior="Flash" id="0" name="Flash" sid="116819933795009" type="Raley">
+                                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
                                 <action id="0" name="Spawn another object" sid="756462961574247" type="Raley">
                                     <param id="0" name="Object">BloodSplash</param>
                                     <param id="1" name="Layer">&quot;Main&quot;</param>
@@ -216,21 +367,11 @@
                                 </action>
                             </actions>
                         </event-block>
-                        <event-block sid="270652310301254">
-                            <conditions>
-                                <condition id="-1" name="Every tick" sid="770420706230310" type="System" />
-                            </conditions>
-                            <actions>
-                                <action id="-5" name="Set width" sid="438546950665016" type="HPBar">
-                                    <param id="0" name="Width">Raley.HP</param>
-                                </action>
-                            </actions>
-                        </event-block>
                         <event-block sid="428494240248870">
                             <conditions>
                                 <condition id="-7" name="Compare instance variable" sid="238017620415342" type="Raley">
                                     <param id="0" name="Instance variable">HP</param>
-                                    <param id="1" name="Comparison">0</param>
+                                    <param id="1" name="Comparison">3</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
                             </conditions>
@@ -244,129 +385,407 @@
                                     <param id="0" name="Mouse button">0</param>
                                     <param id="1" name="Click type">0</param>
                                 </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Spawn another object" sid="638033961653260" type="Raley">
-                                    <param id="0" name="Object">RaleyDamageHitbox</param>
-                                    <param id="1" name="Layer">&quot;Main&quot;</param>
-                                    <param id="2" name="Image point">1</param>
-                                </action>
-                                <action behavior="Pin" id="0" name="Pin to object" sid="841264681224732" type="RaleyDamageHitbox">
-                                    <param id="0" name="Pin to">Raley</param>
-                                    <param id="1" name="Mode">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="200876174353242" type="RaleyDamageHitbox">
-                                    <param id="0" name="Instance variable">doDamage</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="574625308556990">
-                            <conditions>
-                                <condition id="-7" name="Compare instance variable" sid="214328539357993" type="RaleyDamageHitbox">
-                                    <param id="0" name="Instance variable">doDamage</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="0" name="Play" sid="659075158567087" type="Audio">
-                                    <param id="0" name="Audio file">BloodSplash</param>
-                                    <param id="2" name="Loop">0</param>
-                                    <param id="3" name="Volume">-5</param>
-                                    <param id="1" name="Tag (optional)">&quot;BloodSplash&quot;</param>
-                                </action>
-                                <action id="0" name="Spawn another object" sid="610267956526258" type="RaleyDamageHitbox">
-                                    <param id="0" name="Object">BloodSplash</param>
-                                    <param id="1" name="Layer">&quot;Main&quot;</param>
-                                    <param id="2" name="Image point">0</param>
-                                </action>
-                                <action id="-10" name="Set value" sid="936966353823676" type="RaleyDamageHitbox">
-                                    <param id="0" name="Instance variable">doDamage</param>
-                                    <param id="1" name="Value">0</param>
-                                </action>
-                                <action id="-16" name="Wait" sid="967493587456335" type="System">
-                                    <param id="0" name="Seconds">0.25</param>
-                                </action>
-                                <action id="-9" name="Destroy" sid="592929093106770" type="RaleyDamageHitbox" />
-                            </actions>
-                        </event-block>
-                        <event-block sid="497875989949941">
-                            <conditions>
-                                <condition id="0" name="On key pressed" sid="146383435232699" type="Keyboard">
-                                    <param id="0" name="Key">81</param>
-                                </condition>
-                            </conditions>
-                            <actions>
-                                <action id="-10" name="Add to" sid="437469802504556" type="System">
-                                    <param id="0" name="Variable">TechSelected</param>
-                                    <param id="1" name="Value">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="588713602085310">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="336977987087638" type="System">
-                                    <param id="0" name="Variable">TechSelected</param>
+                                <condition id="-7" name="Compare instance variable" sid="889104653558578" type="Raley">
+                                    <param id="0" name="Instance variable">isAtacking</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">0</param>
                                 </condition>
-                            </conditions>
-                            <actions>
-                                <action id="4" name="Set animation" sid="681818362562542" type="WeaponEquiped">
-                                    <param id="0" name="Animation">&quot;Weapon0&quot;</param>
-                                    <param id="1" name="From">1</param>
-                                </action>
-                            </actions>
-                        </event-block>
-                        <event-block sid="878576645759403">
-                            <conditions>
-                                <condition id="-14" name="Compare variable" sid="978632967650594" type="System">
-                                    <param id="0" name="Variable">TechSelected</param>
-                                    <param id="1" name="Comparison">0</param>
-                                    <param id="2" name="Value">1</param>
+                                <condition id="2" inverted="1" name="Is playing" sid="536645185540193" type="Raley">
+                                    <param id="0" name="Animation">&quot;Atack1&quot;</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Is playing" sid="964891341950885" type="Raley">
+                                    <param id="0" name="Animation">&quot;Atack2&quot;</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Is playing" sid="295649436499086" type="Raley">
+                                    <param id="0" name="Animation">&quot;Atack3&quot;</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="182024709373097" type="WeaponEquiped">
-                                    <param id="0" name="Animation">&quot;Weapon1&quot;</param>
+                                <action id="-10" name="Set value" sid="440605514238153" type="Raley">
+                                    <param id="0" name="Instance variable">isAtacking</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                                <action behavior="Platform" id="1" name="Set max speed" sid="684547601936610" type="Raley">
+                                    <param id="0" name="Max Speed">100</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block sid="525595213572980">
+                                    <conditions>
+                                        <condition id="1" name="Is overlapping another object" sid="677391074194397" type="Raley">
+                                            <param id="0" name="Object">Bush</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="283418602354675" type="Bush">
+                                            <param id="0" name="Object">LeafHiddenSplash</param>
+                                            <param id="1" name="Layer">&quot;Bushes&quot;</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                        <action id="4" name="Set animation" sid="184270558028387" type="Bush">
+                                            <param id="0" name="Animation">&quot;Cut&quot;</param>
+                                            <param id="1" name="From">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block sid="574625308556990">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="214328539357993" type="Raley">
+                                    <param id="0" name="Instance variable">isAtacking</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Is playing" sid="944589030303079" type="Raley">
+                                    <param id="0" name="Animation">&quot;Atack2&quot;</param>
+                                </condition>
+                                <condition id="2" inverted="1" name="Is playing" sid="548548075161825" type="Raley">
+                                    <param id="0" name="Animation">&quot;Atack3&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="480868535168037" type="Raley">
+                                    <param id="0" name="Animation">&quot;Atack1&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block any="1" sid="475674812547000">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="237837274258220" type="Raley">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="780991931763711" type="Raley">
+                                            <param id="0" name="Object">RaleyDamageZone</param>
+                                            <param id="1" name="Layer">&quot;Main&quot;</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="865806012850995">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="331194514464737" type="Raley">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="102608568107145" type="RaleyDamageZone" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="674438541072097">
+                                    <conditions>
+                                        <condition id="0" name="On click" sid="661993630041320" type="Mouse">
+                                            <param id="0" name="Mouse button">0</param>
+                                            <param id="1" name="Click type">0</param>
+                                        </condition>
+                                        <condition id="2" name="Is playing" sid="922528942049112" type="Raley">
+                                            <param id="0" name="Animation">&quot;Atack1&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block any="1" sid="217919660235375">
+                                            <conditions>
+                                                <condition id="3" name="Compare frame" sid="312747322128080" type="Raley">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Number">2</param>
+                                                </condition>
+                                                <condition id="3" name="Compare frame" sid="598488887145203" type="Raley">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Number">3</param>
+                                                </condition>
+                                                <condition id="3" name="Compare frame" sid="515024110271918" type="Raley">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Number">4</param>
+                                                </condition>
+                                                <condition id="3" name="Compare frame" sid="698514881691349" type="Raley">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Number">5</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="2" name="Stop" sid="625806978651849" type="Raley" />
+                                                <action id="-10" name="Set value" sid="175988160723070" type="Raley">
+                                                    <param id="0" name="Instance variable">isAtacking</param>
+                                                    <param id="1" name="Value">2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="315067464353223">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="469475724570639" type="Raley">
+                                                    <param id="0" name="Object">Bush</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="483508263508665" type="Bush">
+                                                    <param id="0" name="Object">LeafHiddenSplash</param>
+                                                    <param id="1" name="Layer">&quot;Bushes&quot;</param>
+                                                    <param id="2" name="Image point">1</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="336052206204034" type="Bush">
+                                                    <param id="0" name="Animation">&quot;Cut&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
                         </event-block>
-                        <event-block sid="576238983069893">
+                        <event-block sid="359006661626142">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="264145589078308" type="System">
-                                    <param id="0" name="Variable">TechSelected</param>
+                                <condition id="-7" name="Compare instance variable" sid="289017517703707" type="Raley">
+                                    <param id="0" name="Instance variable">isAtacking</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">2</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="4" name="Set animation" sid="546836330029301" type="WeaponEquiped">
-                                    <param id="0" name="Animation">&quot;Weapon2&quot;</param>
+                                <action id="4" name="Set animation" sid="905084976896203" type="Raley">
+                                    <param id="0" name="Animation">&quot;Atack2&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block any="1" sid="669821153029467">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="433578685301203" type="Raley">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="740666553545677" type="Raley">
+                                            <param id="0" name="Object">RaleyDamageZone</param>
+                                            <param id="1" name="Layer">&quot;Main&quot;</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="551826121710716">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="385043941932099" type="Raley">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">2</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="723590646886340" type="RaleyDamageZone" />
+                                    </actions>
+                                </event-block>
+                                <event-block sid="481196093857556">
+                                    <conditions>
+                                        <condition id="0" name="On click" sid="961673116303337" type="Mouse">
+                                            <param id="0" name="Mouse button">0</param>
+                                            <param id="1" name="Click type">0</param>
+                                        </condition>
+                                        <condition id="2" name="Is playing" sid="297641962234999" type="Raley">
+                                            <param id="0" name="Animation">&quot;Atack2&quot;</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block any="1" sid="995300844400140">
+                                            <conditions>
+                                                <condition id="3" name="Compare frame" sid="816400949075695" type="Raley">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Number">3</param>
+                                                </condition>
+                                                <condition id="3" name="Compare frame" sid="432205348551790" type="Raley">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Number">4</param>
+                                                </condition>
+                                                <condition id="3" name="Compare frame" sid="447143100114940" type="Raley">
+                                                    <param id="0" name="Comparison">0</param>
+                                                    <param id="1" name="Number">5</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="2" name="Stop" sid="863206678892536" type="Raley" />
+                                                <action id="-10" name="Set value" sid="990168674742409" type="Raley">
+                                                    <param id="0" name="Instance variable">isAtacking</param>
+                                                    <param id="1" name="Value">3</param>
+                                                </action>
+                                                <action id="-9" name="Destroy" sid="322142733413689" type="RaleyDamageZone" />
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="293663232771157">
+                                            <conditions>
+                                                <condition id="1" name="Is overlapping another object" sid="237997312207162" type="Raley">
+                                                    <param id="0" name="Object">Bush</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="0" name="Spawn another object" sid="229010100000232" type="Bush">
+                                                    <param id="0" name="Object">LeafHiddenSplash</param>
+                                                    <param id="1" name="Layer">&quot;Bushes&quot;</param>
+                                                    <param id="2" name="Image point">1</param>
+                                                </action>
+                                                <action id="4" name="Set animation" sid="550191195670470" type="Bush">
+                                                    <param id="0" name="Animation">&quot;Cut&quot;</param>
+                                                    <param id="1" name="From">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
                         </event-block>
-                        <event-block sid="505879038832538">
+                        <event-block sid="816982407656503">
                             <conditions>
-                                <condition id="-14" name="Compare variable" sid="417696272024242" type="System">
-                                    <param id="0" name="Variable">TechSelected</param>
+                                <condition id="-7" name="Compare instance variable" sid="693235836957415" type="Raley">
+                                    <param id="0" name="Instance variable">isAtacking</param>
                                     <param id="1" name="Comparison">0</param>
                                     <param id="2" name="Value">3</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action id="-9" name="Set value" sid="809209058600006" type="System">
-                                    <param id="0" name="Variable">TechSelected</param>
+                                <action id="4" name="Set animation" sid="355879703346689" type="Raley">
+                                    <param id="0" name="Animation">&quot;Atack3&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                            <sub-events>
+                                <event-block any="1" sid="449641293302525">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="603676182479059" type="Raley">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">0</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="0" name="Spawn another object" sid="793148882770662" type="Raley">
+                                            <param id="0" name="Object">RaleyDamageZone</param>
+                                            <param id="1" name="Layer">&quot;Main&quot;</param>
+                                            <param id="2" name="Image point">1</param>
+                                        </action>
+                                    </actions>
+                                </event-block>
+                                <event-block any="1" sid="811245624506102">
+                                    <conditions>
+                                        <condition id="3" name="Compare frame" sid="673694195053762" type="Raley">
+                                            <param id="0" name="Comparison">0</param>
+                                            <param id="1" name="Number">3</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions>
+                                        <action id="-9" name="Destroy" sid="327221777303769" type="RaleyDamageZone" />
+                                    </actions>
+                                </event-block>
+                            </sub-events>
+                        </event-block>
+                        <event-block any="1" sid="277644878295130">
+                            <conditions>
+                                <condition id="4" name="On finished" sid="745453864283323" type="Raley">
+                                    <param id="0" name="Animation">&quot;Atack1&quot;</param>
+                                </condition>
+                                <condition id="4" name="On finished" sid="935539153183014" type="Raley">
+                                    <param id="0" name="Animation">&quot;Atack2&quot;</param>
+                                </condition>
+                                <condition id="4" name="On finished" sid="220451664905403" type="Raley">
+                                    <param id="0" name="Animation">&quot;Atack3&quot;</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="1" name="Set max speed" sid="431865818088548" type="Raley">
+                                    <param id="0" name="Max Speed">800</param>
+                                </action>
+                                <action id="-10" name="Set value" sid="754032086512659" type="Raley">
+                                    <param id="0" name="Instance variable">isAtacking</param>
                                     <param id="1" name="Value">0</param>
                                 </action>
+                                <action id="-9" name="Destroy" sid="680662764054613" type="RaleyDamageZone" />
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-block>
             </sub-events>
         </event-group>
+        <event-group description="" sid="401711044356171" title="HyenasWalk">
+            <sub-events>
+                <event-block disabled="1" sid="642504250657726">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="650813430625659" type="Hyena">
+                            <param id="0" name="Instance variable">direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Left&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="784462886116214" type="Hyena">
+                            <param id="0" name="State">0</param>
+                        </action>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="717658865750105" type="Hyena">
+                            <param id="0" name="Control">0</param>
+                        </action>
+                    </actions>
+                </event-block>
+                <event-block disabled="1" sid="846783262048834">
+                    <conditions>
+                        <condition id="-7" name="Compare instance variable" sid="541614105928636" type="Hyena">
+                            <param id="0" name="Instance variable">direction</param>
+                            <param id="1" name="Comparison">0</param>
+                            <param id="2" name="Value">&quot;Rigth&quot;</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="7" name="Set mirrored" sid="270652619970892" type="Hyena">
+                            <param id="0" name="State">1</param>
+                        </action>
+                        <action behavior="Platform" id="7" name="Simulate control" sid="235271948175318" type="Hyena">
+                            <param id="0" name="Control">1</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+        <event-block sid="364946064986464">
+            <conditions>
+                <condition id="0" name="On collision with another object" sid="892589442852557" type="Hyena">
+                    <param id="0" name="Object">RaleyDamageZone</param>
+                </condition>
+                <condition behavior="Flash" id="0" inverted="1" name="Is flashing" sid="866858316241840" type="Hyena" />
+            </conditions>
+            <actions>
+                <action id="0" name="Play" sid="697652508796118" type="Audio">
+                    <param id="0" name="Audio file">BloodSplash</param>
+                    <param id="2" name="Loop">0</param>
+                    <param id="3" name="Volume">-5</param>
+                    <param id="1" name="Tag (optional)">&quot;BloodSplash&quot;</param>
+                </action>
+                <action id="0" name="Spawn another object" sid="803403162327374" type="Hyena">
+                    <param id="0" name="Object">BloodSplash</param>
+                    <param id="1" name="Layer">&quot;Main&quot;</param>
+                    <param id="2" name="Image point">0</param>
+                </action>
+                <action behavior="Flash" id="0" name="Flash" sid="391247293036951" type="Hyena">
+                    <param id="0" name="&apos;On&apos; time">0.1</param>
+                    <param id="1" name="&apos;Off&apos; time">0.1</param>
+                    <param id="2" name="Duration">0.20</param>
+                </action>
+                <action id="-12" name="Subtract from" sid="603363133301716" type="Hyena">
+                    <param id="0" name="Instance variable">HP</param>
+                    <param id="1" name="Value">175</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="726364118083699">
+            <conditions>
+                <condition id="-7" name="Compare instance variable" sid="362789066427637" type="Hyena">
+                    <param id="0" name="Instance variable">HP</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="962027272684211" type="Hyena" />
+            </actions>
+        </event-block>
     </events>
 </c2eventsheet>
